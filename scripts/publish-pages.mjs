@@ -56,10 +56,18 @@ try {
     if (!page.stderr.includes('HTTP 404')) throw new Error(page.stderr || 'Cannot read Pages settings.');
     method = 'POST';
   }
-  run('gh', ['api', '--method', method, `repos/${repository}/pages`, '--input', '-'], root, {
-    input: JSON.stringify({ build_type: 'legacy', source: { branch: 'gh-pages', path: '/' } }),
-    stdio: ['pipe', 'ignore', 'inherit'],
-  });
+  const previous = page.status === 0 ? JSON.parse(page.stdout) : null;
+  const sourceChanged = previous?.build_type !== 'legacy'
+    || previous?.source?.branch !== 'gh-pages' || previous?.source?.path !== '/';
+  if (sourceChanged) {
+    run('gh', ['api', '--method', method, `repos/${repository}/pages`, '--input', '-'], root, {
+      input: JSON.stringify({ build_type: 'legacy', source: { branch: 'gh-pages', path: '/' } }),
+      stdio: ['pipe', 'ignore', 'inherit'],
+    });
+    run('gh', ['api', '--method', 'POST', `repos/${repository}/pages/builds`], root, {
+      stdio: ['ignore', 'ignore', 'inherit'],
+    });
+  }
   console.log(capture('gh', ['api', `repos/${repository}/pages`, '--jq', '.html_url']));
   published = true;
 } finally {
