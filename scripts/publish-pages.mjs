@@ -10,7 +10,10 @@ const run = (command, args, cwd = root, options = {}) => execFileSync(command, a
 const capture = (command, args, cwd = root) => run(command, args, cwd, {
   stdio: ['ignore', 'pipe', 'inherit'], encoding: 'utf8',
 }).trim();
-const auth = ['-c', 'credential.helper=', '-c', 'credential.helper=!gh auth git-credential'];
+const auth = [
+  '-c', 'http.version=HTTP/1.1', '-c', 'http.postBuffer=134217728',
+  '-c', 'credential.helper=', '-c', 'credential.helper=!gh auth git-credential',
+];
 const repository = JSON.parse(capture('gh', ['repo', 'view', '--json', 'nameWithOwner'])).nameWithOwner;
 const remote = `https://github.com/${repository}.git`;
 
