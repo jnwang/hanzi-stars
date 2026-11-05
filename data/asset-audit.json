@@ -1,0 +1,69 @@
+{
+  "version": "pep-a2db7b770e2f007d",
+  "books": [
+    {
+      "id": "g1s1",
+      "characters": 280,
+      "stars": 28
+    },
+    {
+      "id": "g1s2",
+      "characters": 495,
+      "stars": 50
+    },
+    {
+      "id": "g2s1",
+      "characters": 609,
+      "stars": 61
+    },
+    {
+      "id": "g2s2",
+      "characters": 593,
+      "stars": 60
+    },
+    {
+      "id": "g3s1",
+      "characters": 428,
+      "stars": 43
+    },
+    {
+      "id": "g3s2",
+      "characters": 405,
+      "stars": 41
+    },
+    {
+      "id": "g4s1",
+      "characters": 429,
+      "stars": 43
+    },
+    {
+      "id": "g4s2",
+      "characters": 423,
+      "stars": 43
+    },
+    {
+      "id": "g5s1",
+      "characters": 359,
+      "stars": 36
+    },
+    {
+      "id": "g5s2",
+      "characters": 309,
+      "stars": 31
+    },
+    {
+      "id": "g6s1",
+      "characters": 180,
+      "stars": 18
+    },
+    {
+      "id": "g6s2",
+      "characters": 120,
+      "stars": 12
+    }
+  ],
+  "totalStars": 466,
+  "uniqueCharacters": 2973,
+  "audioClips": 3100,
+  "missingContexts": []
+}

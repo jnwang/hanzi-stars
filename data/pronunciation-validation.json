@@ -1,0 +1,383 @@
+{
+  "selectedCharacterReadings": 3114,
+  "allTextbookCharacterReadings": 3134,
+  "contextCharacters": 2985,
+  "contextReadings": 3272,
+  "missing": [],
+  "invalid": [],
+  "ambiguousClues": [],
+  "phraseDifferences": [
+    {
+      "character": "地",
+      "reading": "de",
+      "context": "慢慢地走",
+      "inferred": "dì"
+    },
+    {
+      "character": "数",
+      "reading": "shǔ",
+      "context": "数一数",
+      "inferred": "shù"
+    },
+    {
+      "character": "得",
+      "reading": "de",
+      "context": "跑得快",
+      "inferred": "dé"
+    },
+    {
+      "character": "斗",
+      "reading": "dǒu",
+      "context": "北斗",
+      "inferred": "dòu"
+    },
+    {
+      "character": "啦",
+      "reading": "la",
+      "context": "来啦",
+      "inferred": "lā"
+    },
+    {
+      "character": "得",
+      "reading": "děi",
+      "context": "得亏",
+      "inferred": "dé"
+    },
+    {
+      "character": "呀",
+      "reading": "yā",
+      "context": "呀，下雨了",
+      "inferred": "ya"
+    },
+    {
+      "character": "哪",
+      "reading": "na",
+      "context": "天哪",
+      "inferred": "nǎ"
+    },
+    {
+      "character": "教",
+      "reading": "jiāo",
+      "context": "教书",
+      "inferred": "jiào"
+    },
+    {
+      "character": "稼",
+      "reading": "jià",
+      "context": "庄稼",
+      "inferred": "jia"
+    },
+    {
+      "character": "系",
+      "reading": "jì",
+      "context": "系鞋带",
+      "inferred": "xì"
+    },
+    {
+      "character": "撒",
+      "reading": "sǎ",
+      "context": "撒种",
+      "inferred": "sā"
+    },
+    {
+      "character": "倒",
+      "reading": "dào",
+      "context": "倒水",
+      "inferred": "dǎo"
+    },
+    {
+      "character": "钉",
+      "reading": "dìng",
+      "context": "钉木板",
+      "inferred": "dīng"
+    },
+    {
+      "character": "哇",
+      "reading": "wa",
+      "context": "好哇",
+      "inferred": "wā"
+    },
+    {
+      "character": "猬",
+      "reading": "wèi",
+      "context": "刺猬",
+      "inferred": "wei"
+    },
+    {
+      "character": "扎",
+      "reading": "zā",
+      "context": "扎辫子",
+      "inferred": "zhā"
+    },
+    {
+      "character": "盛",
+      "reading": "chéng",
+      "context": "盛饭",
+      "inferred": "shèng"
+    },
+    {
+      "character": "啊",
+      "reading": "à",
+      "context": "啊，原来是你",
+      "inferred": "a"
+    },
+    {
+      "character": "发",
+      "reading": "fà",
+      "context": "理发",
+      "inferred": "fā"
+    },
+    {
+      "character": "炸",
+      "reading": "zhá",
+      "context": "油炸",
+      "inferred": "zhà"
+    },
+    {
+      "character": "哩",
+      "reading": "li",
+      "context": "好哩",
+      "inferred": "lī"
+    },
+    {
+      "character": "扇",
+      "reading": "shān",
+      "context": "扇风",
+      "inferred": "shàn"
+    },
+    {
+      "character": "帚",
+      "reading": "zhǒu",
+      "context": "扫帚",
+      "inferred": "zhou"
+    },
+    {
+      "character": "箕",
+      "reading": "jī",
+      "context": "簸箕",
+      "inferred": "ji"
+    },
+    {
+      "character": "待",
+      "reading": "dāi",
+      "context": "待一会儿",
+      "inferred": "dài"
+    },
+    {
+      "character": "挨",
+      "reading": "ái",
+      "context": "挨饿",
+      "inferred": "āi"
+    },
+    {
+      "character": "粘",
+      "reading": "zhān",
+      "context": "粘贴",
+      "inferred": "nián"
+    },
+    {
+      "character": "冲",
+      "reading": "chòng",
+      "context": "冲着",
+      "inferred": "chōng"
+    },
+    {
+      "character": "呢",
+      "reading": "ní",
+      "context": "呢子",
+      "inferred": "ne"
+    },
+    {
+      "character": "琢",
+      "reading": "zuó",
+      "context": "琢磨",
+      "inferred": "zhuó"
+    },
+    {
+      "character": "相",
+      "reading": "xiàng",
+      "context": "相片",
+      "inferred": "xiāng"
+    },
+    {
+      "character": "切",
+      "reading": "qiē",
+      "context": "切菜",
+      "inferred": "qiè"
+    },
+    {
+      "character": "乘",
+      "reading": "shèng",
+      "context": "千乘之国",
+      "inferred": "chéng"
+    },
+    {
+      "character": "和",
+      "reading": "huò",
+      "context": "和药",
+      "inferred": "hé"
+    },
+    {
+      "character": "缝",
+      "reading": "féng",
+      "context": "缝衣服",
+      "inferred": "fèng"
+    },
+    {
+      "character": "旋",
+      "reading": "xuàn",
+      "context": "旋风",
+      "inferred": "xuán"
+    },
+    {
+      "character": "涨",
+      "reading": "zhàng",
+      "context": "头昏脑涨",
+      "inferred": "zhǎng"
+    },
+    {
+      "character": "嗽",
+      "reading": "sòu",
+      "context": "咳嗽",
+      "inferred": "sou"
+    },
+    {
+      "character": "铛",
+      "reading": "dāng",
+      "context": "铃铛",
+      "inferred": "dang"
+    },
+    {
+      "character": "雀",
+      "reading": "qiǎo",
+      "context": "家雀儿",
+      "inferred": "què"
+    },
+    {
+      "character": "脏",
+      "reading": "zàng",
+      "context": "心脏",
+      "inferred": "zāng"
+    },
+    {
+      "character": "吁",
+      "reading": "yū",
+      "context": "吁，停下",
+      "inferred": "xū"
+    },
+    {
+      "character": "露",
+      "reading": "lòu",
+      "context": "露头",
+      "inferred": "lù"
+    },
+    {
+      "character": "啊",
+      "reading": "ā",
+      "context": "啊，好美",
+      "inferred": "a"
+    },
+    {
+      "character": "唉",
+      "reading": "āi",
+      "context": "唉，我来啦",
+      "inferred": "ài"
+    },
+    {
+      "character": "纪",
+      "reading": "jǐ",
+      "context": "纪老师",
+      "inferred": "jì"
+    },
+    {
+      "character": "剥",
+      "reading": "bō",
+      "context": "剥落",
+      "inferred": "bāo"
+    },
+    {
+      "character": "折",
+      "reading": "shé",
+      "context": "折本",
+      "inferred": "zhé"
+    },
+    {
+      "character": "嚣",
+      "reading": "xiāo",
+      "context": "喧嚣",
+      "inferred": "áo"
+    },
+    {
+      "character": "任",
+      "reading": "rén",
+      "context": "任丘",
+      "inferred": "rèn"
+    },
+    {
+      "character": "落",
+      "reading": "là",
+      "context": "落下功课",
+      "inferred": "luò"
+    },
+    {
+      "character": "哼",
+      "reading": "hng",
+      "context": "哼，不理你了",
+      "inferred": "hēng"
+    },
+    {
+      "character": "累",
+      "reading": "léi",
+      "context": "果实累累",
+      "inferred": "lèi"
+    },
+    {
+      "character": "啰",
+      "reading": "luo",
+      "context": "下雨啰",
+      "inferred": "luō"
+    },
+    {
+      "character": "绰",
+      "reading": "chāo",
+      "context": "绰起",
+      "inferred": "chuò"
+    },
+    {
+      "character": "呵",
+      "reading": "ā",
+      "context": "呵呀",
+      "inferred": "hē"
+    },
+    {
+      "character": "泊",
+      "reading": "pō",
+      "context": "湖泊",
+      "inferred": "bó"
+    },
+    {
+      "character": "耶",
+      "reading": "yé",
+      "context": "是耶非耶",
+      "inferred": "yē"
+    },
+    {
+      "character": "豁",
+      "reading": "huò",
+      "context": "豁达",
+      "inferred": "huō"
+    },
+    {
+      "character": "夫",
+      "reading": "fú",
+      "context": "夫不可陷之盾",
+      "inferred": "fū"
+    },
+    {
+      "character": "呵",
+      "reading": "a",
+      "context": "真美呵",
+      "inferred": "hē"
+    }
+  ]
+}

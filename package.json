@@ -1,0 +1,23 @@
+{
+  "name": "hanzi-stars",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "prepare:data": "node scripts/prepare-data.mjs",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "preview": "vite preview --host 127.0.0.1",
+    "publish:pages": "node scripts/publish-pages.mjs"
+  },
+  "dependencies": {
+    "hanzi-writer": "3.7.3",
+    "hanzi-writer-data": "2.0.1",
+    "pinyin-pro": "3.29.5"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
+  }
+}
