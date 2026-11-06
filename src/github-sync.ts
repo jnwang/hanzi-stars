@@ -40,6 +40,7 @@ export class GitHubSync {
   private config: SyncConfig | null = null;
   private timer: ReturnType<typeof setTimeout> | null = null;
   private running: Promise<void> | null = null;
+  private connecting = false;
   private epoch = 0;
   private controller: AbortController | null = null;
   private seen = '';
@@ -63,17 +64,20 @@ export class GitHubSync {
   }
   async connect(repository: string, token: string): Promise<void> {
     const candidate = validateSyncConfig({ repository: repository.trim(), token: token.trim() });
-    if (this.running) throw new Error('请等当前同步结束后再更换连接。');
+    if (this.running || this.connecting) throw new Error('请等当前同步结束后再更换连接。');
+    const epoch = ++this.epoch;
+    this.connecting = true;
     this.setStatus('syncing', '正在检查私有仓库');
     try {
       await this.checkRepository(candidate);
+      if (epoch !== this.epoch) return;
       this.options.storage.setItem(SYNC_KEY, JSON.stringify(candidate));
-      this.config = candidate; this.epoch++; this.seen = '';
+      this.config = candidate; this.seen = ''; this.connecting = false;
       await this.syncNow();
     } catch (error) {
-      this.setStatus('error', error instanceof Error ? error.message : '连接失败，请重试。');
+      if (epoch === this.epoch) this.setStatus('error', error instanceof Error ? error.message : '连接失败，请重试。');
       throw error;
-    }
+    } finally { this.connecting = false; }
   }
   disconnect(): void {
     // If removal fails, do not falsely report that this device has disconnected.
@@ -83,7 +87,7 @@ export class GitHubSync {
     this.setStatus('off', '已断开；本机和云端记录都保留');
   }
   schedule(): void {
-    if (!this.config) return;
+    if (!this.config || this.connecting) return;
     let fingerprint: string;
     try { fingerprint = progressFingerprint(this.options.getProgress()); }
     catch { return; }
@@ -94,7 +98,7 @@ export class GitHubSync {
     if (!this.timer) this.timer = setTimeout(() => { this.timer = null; void this.syncNow(); }, 1800);
   }
   async syncNow(): Promise<void> {
-    if (!this.config) return;
+    if (!this.config || this.connecting) return;
     if (this.running) return this.running;
     if (this.timer) clearTimeout(this.timer); this.timer = null;
     const config = this.config, epoch = this.epoch, revision = this.revision;

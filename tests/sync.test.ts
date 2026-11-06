@@ -130,3 +130,12 @@ test('本机无法写入时不报告已接收云端记录',()=>{
   const store=new ProgressStore(c,storage);const remote=emptyProgress(c);complete(remote,c);
   assert.throws(()=>store.receive(remote),/尚未存入本机/);assert.equal(store.raw(),original);
 });
+test('连接检查期间断开，不会在请求返回后重新保存密钥',async()=>{
+  const c=curriculum(),remote=server(c);let release!:()=>void;
+  const gate=new Promise<void>(resolve=>{release=resolve;});
+  const delayed:typeof fetch=async(...args)=>{await gate;return remote.fetcher(...args);};
+  const a=device(c,delayed);const connecting=a.sync.connect(repository,token);
+  await assert.rejects(a.sync.connect(repository,token),/请等/);
+  a.sync.disconnect();release();await connecting;
+  assert.equal(a.sync.connected,false);assert.equal(a.sync.status.state,'off');assert.equal(a.storage.getItem(SYNC_KEY),null);assert.equal(remote.state.puts,0);
+});
