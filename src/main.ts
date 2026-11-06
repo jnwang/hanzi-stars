@@ -4,12 +4,15 @@ import type { Book, Character, Curriculum, Level, Progress, Session } from './mo
 import { allHeard, answerReading, beginReading, beginWriting, bookComplete, countStars, currentReadingCharacter, currentWritingCharacter, hearCharacter, isComplete, isUnlocked, levelsFor, lightStar, localDate, markPractice, newSession, readingPassed, recallPassed, tracePassed, validateProgress } from './engine.ts';
 import { ProgressStore } from './storage.ts';
 import { AudioCancelled, Voice } from './audio.ts';
+import { GitHubSync, SYNC_KEY } from './github-sync.ts';
+import { mergeProgress, progressFingerprint } from './sync-merge.ts';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const base = new URL(import.meta.env.BASE_URL, document.baseURI).href;
 const voice = new Voice(base);
 const gradeNames = ['一','二','三','四','五','六'];
 let curriculum: Curriculum, progress: Progress, store: ProgressStore;
+let sync: GitHubSync, pendingCloud: Progress | null = null;
 let generation = 0;
 let writer: HanziWriter | null = null;
 let feedback: { character: Character; selected: string; correct: boolean; choices: string[] } | null = null;
@@ -27,10 +30,39 @@ function star(letter = '', cls = ''): string {
   return `<svg class="star ${cls}" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 5 63 32 93 36 71 57 77 88 50 73 23 88 29 57 7 36 37 32Z"/><text x="50" y="57" text-anchor="middle">${escape(letter)}</text></svg>`;
 }
 function go(hash: string): void { if (location.hash === hash) render(); else location.hash = hash; }
-function commit(): void { store.save(progress); updateSaveNotice(); }
+function commit(): void { if(store.save(progress))sync?.schedule(); updateSaveNotice(); }
+function receiveCloud(cloud:Progress):void{
+  if(store.error)throw new Error('本机记录暂时无法保存，请先处理保存提示。');
+  const merged=mergeProgress(progress,cloud,curriculum);
+  if(current){
+    // Finish the question or handwritten stroke without changing the visible attempt.
+    pendingCloud=structuredClone(merged);
+    merged.sessions[current.level.id]=current.session;
+    merged.lastLevel=current.level.id;
+  }
+  if(progressFingerprint(merged)!==progressFingerprint(progress)){
+    store.receive(merged);progress=merged;
+    if(!current&&location.hash!=='#/sync')render();
+  }
+}
+function applyPendingCloud():void{
+  if(!pendingCloud||store.error)return;
+  const merged=mergeProgress(progress,pendingCloud,curriculum);
+  store.receive(merged);progress=merged;pendingCloud=null;
+}
+function updateSyncStatus():void{
+  if(!sync)return;
+  const status=sync.status;
+  document.querySelectorAll<HTMLElement>('[data-sync-message]').forEach(el=>{el.textContent=status.message;});
+  document.querySelectorAll<HTMLElement>('[data-sync-last]').forEach(el=>{el.textContent=status.lastSynced?`最近同步：${new Date(status.lastSynced).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})}`:'';});
+  const strip=document.querySelector<HTMLElement>('#sync-strip');
+  if(strip){strip.hidden=!sync.connected;strip.dataset.state=store.error?'error':status.state;strip.textContent=store.error?'保存未完成':status.state==='synced'?'已同步':status.state==='syncing'?'正在同步…':'已存本机 · 待同步';}
+  document.querySelectorAll<HTMLButtonElement>('[data-action="sync-now"]').forEach(b=>{b.disabled=status.state==='syncing';});
+}
 function updateSaveNotice(): void {
   const el = document.querySelector<HTMLElement>('#save-notice');
   if (el) { el.textContent = store.error; el.hidden = !store.error; }
+  updateSyncStatus();
 }
 function notice(message: string): void {
   const el = document.querySelector<HTMLElement>('#notice');
@@ -41,7 +73,7 @@ async function speak(file: string): Promise<void> {
   catch (error) { if (!(error instanceof AudioCancelled)) notice(error instanceof Error ? error.message : '请再点一次喇叭。'); }
 }
 function chrome(title: string, back?: string, right = ''): string {
-  return `<header class="topbar"><div class="top-left">${back ? `<button class="icon-button" data-go="${back}" aria-label="返回">${icon('back')}</button>` : `<a class="brand" href="#/">${star()}<span>汉字星星</span></a>`}</div>${title ? `<h1>${escape(title)}</h1>` : '<span></span>'}<div class="top-right">${right}</div></header><div id="save-notice" class="notice warning" role="alert" hidden></div><div id="notice" class="notice" role="status" hidden></div>`;
+  return `<header class="topbar"><div class="top-left">${back ? `<button class="icon-button" data-go="${back}" aria-label="返回">${icon('back')}</button>` : `<a class="brand" href="#/">${star()}<span>汉字星星</span></a>`}</div>${title ? `<h1>${escape(title)}</h1>` : '<span></span>'}<div class="top-right">${right}</div></header><div id="sync-strip" class="sync-strip" role="status" hidden></div><div id="save-notice" class="notice warning" role="alert" hidden></div><div id="notice" class="notice" role="status" hidden></div>`;
 }
 function soundButton(): string { return `<button class="icon-button sound-button" data-action="sound" aria-label="听语音提示">${icon('sound')}</button>`; }
 function tally(book?: Book): string {
@@ -193,9 +225,54 @@ function render():void{
     else if(session.stage==='reading-result')readingResult(book,level,session);
     else if(session.stage==='trace'||session.stage==='recall')writingPage(book,level,session);
     else {lightStar(progress,session,level,book);commit();donePage(book,level);}
-  }else if(parts[0]==='records')recordsPage();else home();
-  updateSaveNotice();window.scrollTo({top:0,behavior:'instant'});
+  }else if(parts[0]==='records'){
+    recordsPage();
+    app.querySelector('.record-summary')?.insertAdjacentHTML('afterend',`<button class="sync-entry" data-go="#/sync"><span><strong>跨设备同步</strong><small data-sync-message></small></span><span aria-hidden="true">→</span></button>`);
+    const note=app.querySelector('.record-note');if(note)note.textContent='进度自动保存在本机。连接 GitHub 私有仓库后，可在 iPad 和其他设备之间同步。';
+  }else if(parts[0]==='sync')syncPage();else home();
+  updateSaveNotice();updateSyncStatus();window.scrollTo({top:0,behavior:'instant'});
 }
+
+function syncPage():void{
+  const connected=sync.connected;
+  const repository=sync.repository||'jnwang/hanzi-stars-progress';
+  app.innerHTML=`${chrome('家长设置','#/records')}<main class="page sync-page">
+    <section class="sync-card"><h2>在别的设备接着学</h2><p>连接一次，以后自动同步。</p>
+      <div class="sync-status" role="status"><strong data-sync-message></strong><small data-sync-last></small></div>
+      ${connected?`<p class="sync-repository">${escape(repository)}</p><button class="primary" data-action="sync-now">立即同步</button><p class="sync-note">换设备前，确认页面显示“已同步”。没有网络时，进度先保存在本机。</p>`:''}
+    </section>
+    <${connected?'details':'section'} class="sync-card">${connected?'<summary>更新连接密钥</summary>':'<h3>首次连接</h3>'}
+      <form id="sync-form" class="sync-form">
+        <label for="sync-repository">私有仓库</label><input id="sync-repository" name="repository" type="text" value="${escape(repository)}" autocapitalize="none" autocorrect="off" spellcheck="false" required />
+        <label for="sync-token">连接密钥</label><input id="sync-token" name="token" type="password" placeholder="github_pat_…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="token-note" required />
+        <p id="token-note" class="sync-note">密钥仅保存在这台设备的浏览器中，用来访问指定的私有仓库。不要发到聊天里。</p>
+        <button class="primary" type="submit">连接并开启自动同步</button>
+        <p id="sync-form-error" class="sync-form-error" role="alert" hidden></p>
+      </form>
+    </${connected?'details':'section'}>
+    <details class="sync-card sync-help" ${connected?'':'open'}><summary>如何获取连接密钥</summary><ol>
+      <li>登录 GitHub，确认能打开<a href="https://github.com/jnwang/hanzi-stars-progress" target="_blank" rel="noopener noreferrer">学习记录私有仓库</a>。</li>
+      <li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">创建 Fine-grained token</a>。Repository access 选择 <b>Only select repositories</b>，只勾选 <b>hanzi-stars-progress</b>。</li>
+      <li>Repository permissions 中添加 <b>Contents：Read and write</b>，设置到期日，生成后复制到上方。</li>
+    </ol><p class="sync-note">每台设备首次需要连接。建议分别创建密钥，到期后在这里更新。无需授权网站源码仓库。</p></details>
+    <details class="sync-card sync-help"><summary>在 iPad 上使用</summary><p>用 Safari 普通标签页打开网站；也可以通过“分享 → 添加到主屏幕”作为单独入口使用。</p><p>在实际使用的入口完成连接。结束练习或换设备前，确认出现“已同步”。切到后台后，iPad 可能暂停网页，待同步内容会在下次打开并联网后补传。</p><p>星星与打卡会合并。如果两台设备同时做同一关，会保留进度更多的一份完整练习；正在写的这一笔不会被远程切换。</p></details>
+    ${connected?'<button class="text-button disconnect-button" data-action="sync-disconnect">断开这台设备</button>':''}
+  </main>`;
+}
+
+app.addEventListener('submit',async event=>{
+  const form=event.target as HTMLFormElement;if(form.id!=='sync-form')return;event.preventDefault();
+  const button=form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+  const errorBox=form.querySelector<HTMLElement>('#sync-form-error')!;
+  const values=new FormData(form);button.disabled=true;errorBox.hidden=true;
+  try{
+    await sync.connect(String(values.get('repository')||''),String(values.get('token')||''));
+    form.querySelector<HTMLInputElement>('#sync-token')!.value='';
+    void navigator.storage?.persist?.().catch(()=>false);
+    if(location.hash==='#/sync')render();
+  }catch(error){errorBox.textContent=error instanceof Error?error.message:'连接失败，请重试。';errorBox.hidden=false;}
+  finally{button.disabled=false;}
+});
 
 app.addEventListener('click',event=>{
   const button=(event.target as Element).closest<HTMLElement>('button,[data-go]');if(!button||button.hasAttribute('disabled'))return;
@@ -231,6 +308,8 @@ app.addEventListener('click',event=>{
       case 'export':download(JSON.stringify(progress,null,2),`汉字星星-${localDate()}.json`);break;
       case 'export-original':download(store.raw()||JSON.stringify(progress),'汉字星星-原始记录.json');break;
       case 'import':document.querySelector<HTMLInputElement>('#backup-file')?.click();break;
+      case 'sync-now':void sync.syncNow();break;
+      case 'sync-disconnect':if(confirm('断开后，这台设备只在本机保存。云端和本机记录都不会删除，是否断开？')){sync.disconnect();pendingCloud=null;render();}break;
     }
   }catch(error){notice(error instanceof Error?error.message:'这一步暂时没有完成，请重试。');}
 });
@@ -240,19 +319,30 @@ app.addEventListener('change',async event=>{
     const file=input.files[0];if(file.size>4_000_000)throw new Error('备份文件过大。');
     const text=await file.text();validateProgress(JSON.parse(text),curriculum);
     if(!confirm('导入后将使用备份中的学习进度。当前记录会自动保留一份，是否继续？')){input.value='';return;}
-    progress=store.import(text);feedback=null;render();notice('备份已恢复。');
+    progress=store.import(text);feedback=null;render();sync.schedule();notice('备份已恢复。');
   }catch(error){notice(error instanceof Error?error.message:'备份没有导入，原记录未改变。');}
 });
 function download(text:string,name:string):void{const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-window.addEventListener('hashchange',()=>{feedback=null;if(curriculum)render();});
+window.addEventListener('hashchange',()=>{feedback=null;if(curriculum){try{applyPendingCloud();render();}catch(error){notice(error instanceof Error?error.message:'云端记录暂未读取。');}}});
 window.addEventListener('pagehide',()=>{if(progress)commit();voice.stop();});
-window.addEventListener('storage',event=>{if(store&&event.key===store.key){store.error='另一个窗口更新了进度，请刷新后继续。';updateSaveNotice();}});
+window.addEventListener('storage',event=>{if(store&&(event.key===store.key||event.key===SYNC_KEY||event.key===null)){store.error='另一个窗口更新了进度或连接，请刷新后继续。';updateSaveNotice();}});
+const syncIfVisible=()=>{if(sync?.connected&&!document.hidden&&!store.error)void sync.syncNow();};
+window.addEventListener('online',syncIfVisible);
+window.addEventListener('focus',syncIfVisible);
+document.addEventListener('visibilitychange',()=>{if(document.hidden){if(progress)commit();if(sync?.connected&&!store.error)void sync.syncNow();}else syncIfVisible();});
+setInterval(syncIfVisible,60_000);
 
 async function start():Promise<void>{
   try{
     const response=await fetch(new URL('data/curriculum.json',base));if(!response.ok)throw new Error('字库暂时没有打开');
     curriculum=await response.json();if(curriculum.books.length!==12)throw new Error('字库不完整');
-    store=new ProgressStore(curriculum);progress=store.load();render();
+    store=new ProgressStore(curriculum);progress=store.load();
+    sync=new GitHubSync({curriculum,storage:localStorage,getProgress:()=>{if(store.error)throw new Error('请先处理本机保存提示，再进行云同步。');return progress;},receive:receiveCloud,changed:updateSyncStatus});
+    if(sync.connected&&!store.error){
+      app.innerHTML='<main class="loading"><p>正在读取学习进度…</p></main>';
+      await sync.syncNow();
+    }
+    render();
   }catch(error){app.innerHTML=`<main class="load-error"><h1>暂时没有打开</h1><p>${escape(error instanceof Error?error.message:'请检查网络连接')}</p><button class="primary" onclick="location.reload()">重新打开</button></main>`;}
 }
 void start();

@@ -22,6 +22,15 @@ export class ProgressStore {
     catch { this.error = '进度未保存，请在离开前导出备份。'; return false; }
   }
   raw(): string | null { try { return this.storage.getItem(this.key); } catch { return null; } }
+  receive(progress: Progress): void {
+    if (this.error) throw new Error('本机记录暂时无法保存，请先处理保存提示。');
+    const parsed = validateProgress(progress, this.curriculum);
+    try {
+      const prior = this.storage.getItem(this.key);
+      if (prior && !this.storage.getItem(`${this.key}:before-sync`)) this.storage.setItem(`${this.key}:before-sync`, prior);
+      this.storage.setItem(this.key, JSON.stringify(parsed));
+    } catch { throw new Error('云端记录尚未存入本机，请检查浏览器存储空间；原记录仍保留。'); }
+  }
   import(text: string): Progress {
     if (text.length > 4_000_000) throw new Error('备份文件过大。');
     const parsed = validateProgress(JSON.parse(text), this.curriculum);
