@@ -10,7 +10,16 @@ export class ProgressStore {
   load(): Progress {
     try {
       const raw = this.storage.getItem(this.key);
-      return raw ? validateProgress(JSON.parse(raw), this.curriculum) : emptyProgress(this.curriculum);
+      if (raw) return validateProgress(JSON.parse(raw), this.curriculum);
+      for (const version of this.curriculum.legacyVersions || []) {
+        const old = this.storage.getItem(`hanzi-stars:v1:${version}`);
+        if (!old) continue;
+        const migrated = validateProgress(JSON.parse(old), this.curriculum);
+        try { this.storage.setItem(this.key, JSON.stringify(migrated)); }
+        catch { this.error = '旧进度已读取，但新记录未保存，请先导出备份。'; }
+        return migrated;
+      }
+      return emptyProgress(this.curriculum);
     } catch {
       this.error = '原学习记录暂时无法读取。已保留原数据，请到学习记录页导出备份。';
       return emptyProgress(this.curriculum);

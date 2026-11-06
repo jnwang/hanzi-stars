@@ -1,0 +1,3125 @@
+{
+  "id": "supplement",
+  "grade": 0,
+  "term": 0,
+  "title": "补充字",
+  "edition": "旧版差异补充（原书字表核验）",
+  "editionEvidence": {
+    "kind": "cross-edition-supplement",
+    "baseline": "旧版一年级至三年级六册原书附录，加现有旧版四至六年级附录",
+    "generatedAt": "2026-11-06",
+    "baselineComparisonSha256": "2a684d80697589cc0bb0af0f7fc9989da59824f8c49da720c92bb97e1a69dd4c",
+    "currentCurriculumSha256": "3ea66d4433a499bc9a01af202a437634a2a9e3c6d6486ca6cbc433578ac84a2a",
+    "revision2026Verified": false,
+    "copyrightEdition": null
+  },
+  "sources": [
+    {
+      "id": "old-g1s2",
+      "bookId": "g1s2",
+      "title": "人民教育出版社义务教育教科书·语文·一年级下册（深圳市福田区荔园外国语小学公开旧版存档）",
+      "url": "https://lywgyxx.szftedu.cn/xkjc/yw/202209/U020220910610676425133.pdf",
+      "edition": "旧版统编教材（学校2022年公开存档；不代表印次）",
+      "recognitionPdfPages": [
+        123,
+        125
+      ],
+      "writingPdfPages": [
+        126,
+        128
+      ],
+      "printedCounts": {
+        "newRecognition": 400,
+        "writing": 200
+      },
+      "sha256": "f258850beea340544d96c3f01c5ef023ec79fd516d5fec79736ea09565fca52e"
+    },
+    {
+      "id": "old-g2s1",
+      "bookId": "g2s1",
+      "title": "人民教育出版社义务教育教科书·语文·二年级上册（深圳市福田区荔园外国语小学公开旧版存档）",
+      "url": "https://lywgyxx.szftedu.cn/xkjc/yw/202209/U020220910610349617569.pdf",
+      "edition": "旧版统编教材（学校2022年公开存档；不代表印次）",
+      "recognitionPdfPages": [
+        116,
+        119
+      ],
+      "writingPdfPages": [
+        120,
+        122
+      ],
+      "printedCounts": {
+        "newRecognition": 450,
+        "writing": 250
+      },
+      "sha256": "c6ac1cfdc60d68a5895ea9e9b8e7c928501aabb7f053e3a4834a96eb4c333344"
+    },
+    {
+      "id": "old-g2s2",
+      "bookId": "g2s2",
+      "title": "人民教育出版社义务教育教科书·语文·二年级下册（深圳市福田区荔园外国语小学公开旧版存档）",
+      "url": "https://lywgyxx.szftedu.cn/xkjc/yw/202209/U020220910610110001985.pdf",
+      "edition": "旧版统编教材（学校2022年公开存档；不代表印次）",
+      "recognitionPdfPages": [
+        120,
+        123
+      ],
+      "writingPdfPages": [
+        124,
+        126
+      ],
+      "printedCounts": {
+        "newRecognition": 450,
+        "writing": 250
+      },
+      "sha256": "db1ca598a2dea9072a8cb3f09977e77aa6e0d79545083f98c6c8a1c34c118019"
+    },
+    {
+      "id": "old-g3s1",
+      "bookId": "g3s1",
+      "title": "人民教育出版社义务教育教科书·语文·三年级上册（深圳市福田区荔园外国语小学公开旧版存档）",
+      "url": "https://lywgyxx.szftedu.cn/xkjc/yw/202209/U020220910609538372130.pdf",
+      "edition": "旧版统编教材（学校2022年公开存档；不代表印次）",
+      "recognitionPdfPages": [
+        119,
+        121
+      ],
+      "writingPdfPages": [
+        122,
+        123
+      ],
+      "printedCounts": {
+        "newRecognition": 250,
+        "writing": 250
+      },
+      "sha256": "a0b56d79bff5a363c1bdf579e2b602dbc68859b3cc4c9cacea714160005c86f9"
+    },
+    {
+      "id": "old-g3s2",
+      "bookId": "g3s2",
+      "title": "人民教育出版社义务教育教科书·语文·三年级下册（深圳市福田区荔园外国语小学公开旧版存档）",
+      "url": "https://lywgyxx.szftedu.cn/xkjc/yw/202209/U020220910609184233192.pdf",
+      "edition": "旧版统编教材（学校2022年公开存档；不代表印次）",
+      "recognitionPdfPages": [
+        121,
+        123
+      ],
+      "writingPdfPages": [
+        124,
+        125
+      ],
+      "printedCounts": {
+        "newRecognition": 250,
+        "writing": 250
+      },
+      "sha256": "9878324d564f7cad317a052ef9a2178bba2f7cfe33c7abfba3f006a3cd7e4b35"
+    }
+  ],
+  "printedCounts": null,
+  "selectedCounts": {
+    "recognition": 58,
+    "writing": 20,
+    "unique": 58,
+    "stars": 6
+  },
+  "recognition": [
+    "鬼",
+    "秤",
+    "评",
+    "蚜",
+    "辰",
+    "呛",
+    "椰",
+    "秧",
+    "羚",
+    "绦",
+    "驳",
+    "屁",
+    "股",
+    "屎",
+    "婶",
+    "陀",
+    "毽",
+    "窑",
+    "鹂",
+    "蔷",
+    "薇",
+    "逮",
+    "糙",
+    "艳",
+    "残",
+    "君",
+    "锯",
+    "吱",
+    "孝",
+    "础",
+    "瑰",
+    "凰",
+    "蛾",
+    "喳",
+    "唧",
+    "畅",
+    "曼",
+    "蹈",
+    "缭",
+    "谦",
+    "懦",
+    "屠",
+    "苏",
+    "档",
+    "咖",
+    "啡",
+    "淌",
+    "绪",
+    "篇",
+    "骂",
+    "仇",
+    "廊",
+    "缆",
+    "橱",
+    "蕉",
+    "董",
+    "呕",
+    "嘀"
+  ],
+  "writing": [
+    "秤",
+    "评",
+    "秧",
+    "屁",
+    "股",
+    "屎",
+    "艳",
+    "残",
+    "君",
+    "蹈",
+    "谦",
+    "懦",
+    "苏",
+    "淌",
+    "绪",
+    "篇",
+    "鬼",
+    "骂",
+    "仇",
+    "廊"
+  ],
+  "orderedCharacters": [
+    "鬼",
+    "秤",
+    "评",
+    "蚜",
+    "辰",
+    "呛",
+    "椰",
+    "秧",
+    "羚",
+    "绦",
+    "驳",
+    "屁",
+    "股",
+    "屎",
+    "婶",
+    "陀",
+    "毽",
+    "窑",
+    "鹂",
+    "蔷",
+    "薇",
+    "逮",
+    "糙",
+    "艳",
+    "残",
+    "君",
+    "锯",
+    "吱",
+    "孝",
+    "础",
+    "瑰",
+    "凰",
+    "蛾",
+    "喳",
+    "唧",
+    "畅",
+    "曼",
+    "蹈",
+    "缭",
+    "谦",
+    "懦",
+    "屠",
+    "苏",
+    "档",
+    "咖",
+    "啡",
+    "淌",
+    "绪",
+    "篇",
+    "骂",
+    "仇",
+    "廊",
+    "缆",
+    "橱",
+    "蕉",
+    "董",
+    "呕",
+    "嘀"
+  ],
+  "readings": {
+    "鬼": "guǐ",
+    "秤": "chèng",
+    "评": "píng",
+    "蚜": "yá",
+    "辰": "chén",
+    "呛": "qiàng",
+    "椰": "yē",
+    "秧": "yāng",
+    "羚": "líng",
+    "绦": "tāo",
+    "驳": "bó",
+    "屁": "pì",
+    "股": "gǔ",
+    "屎": "shǐ",
+    "婶": "shěn",
+    "陀": "tuó",
+    "毽": "jiàn",
+    "窑": "yáo",
+    "鹂": "lí",
+    "蔷": "qiáng",
+    "薇": "wēi",
+    "逮": "dǎi",
+    "糙": "cāo",
+    "艳": "yàn",
+    "残": "cán",
+    "君": "jūn",
+    "锯": "jù",
+    "吱": "zhī",
+    "孝": "xiào",
+    "础": "chǔ",
+    "瑰": "guī",
+    "凰": "huáng",
+    "蛾": "é",
+    "喳": "zhā",
+    "唧": "jī",
+    "畅": "chàng",
+    "曼": "màn",
+    "蹈": "dǎo",
+    "缭": "liáo",
+    "谦": "qiān",
+    "懦": "nuò",
+    "屠": "tú",
+    "苏": "sū",
+    "档": "dàng",
+    "咖": "kā",
+    "啡": "fēi",
+    "淌": "tǎng",
+    "绪": "xù",
+    "篇": "piān",
+    "骂": "mà",
+    "仇": "chóu",
+    "廊": "láng",
+    "缆": "lǎn",
+    "橱": "chú",
+    "蕉": "jiāo",
+    "董": "dǒng",
+    "呕": "ǒu",
+    "嘀": "dí"
+  },
+  "readingVariants": {
+    "鬼": [
+      "guǐ"
+    ],
+    "秤": [
+      "chèng"
+    ],
+    "评": [
+      "píng"
+    ],
+    "蚜": [
+      "yá"
+    ],
+    "辰": [
+      "chén"
+    ],
+    "呛": [
+      "qiàng"
+    ],
+    "椰": [
+      "yē"
+    ],
+    "秧": [
+      "yāng"
+    ],
+    "羚": [
+      "líng"
+    ],
+    "绦": [
+      "tāo"
+    ],
+    "驳": [
+      "bó"
+    ],
+    "屁": [
+      "pì"
+    ],
+    "股": [
+      "gǔ"
+    ],
+    "屎": [
+      "shǐ"
+    ],
+    "婶": [
+      "shěn"
+    ],
+    "陀": [
+      "tuó"
+    ],
+    "毽": [
+      "jiàn"
+    ],
+    "窑": [
+      "yáo"
+    ],
+    "鹂": [
+      "lí"
+    ],
+    "蔷": [
+      "qiáng"
+    ],
+    "薇": [
+      "wēi"
+    ],
+    "逮": [
+      "dǎi"
+    ],
+    "糙": [
+      "cāo"
+    ],
+    "艳": [
+      "yàn"
+    ],
+    "残": [
+      "cán"
+    ],
+    "君": [
+      "jūn"
+    ],
+    "锯": [
+      "jù"
+    ],
+    "吱": [
+      "zhī"
+    ],
+    "孝": [
+      "xiào"
+    ],
+    "础": [
+      "chǔ"
+    ],
+    "瑰": [
+      "guī"
+    ],
+    "凰": [
+      "huáng"
+    ],
+    "蛾": [
+      "é"
+    ],
+    "喳": [
+      "zhā"
+    ],
+    "唧": [
+      "jī"
+    ],
+    "畅": [
+      "chàng"
+    ],
+    "曼": [
+      "màn"
+    ],
+    "蹈": [
+      "dǎo"
+    ],
+    "缭": [
+      "liáo"
+    ],
+    "谦": [
+      "qiān"
+    ],
+    "懦": [
+      "nuò"
+    ],
+    "屠": [
+      "tú"
+    ],
+    "苏": [
+      "sū"
+    ],
+    "档": [
+      "dàng"
+    ],
+    "咖": [
+      "kā"
+    ],
+    "啡": [
+      "fēi"
+    ],
+    "淌": [
+      "tǎng"
+    ],
+    "绪": [
+      "xù"
+    ],
+    "篇": [
+      "piān"
+    ],
+    "骂": [
+      "mà"
+    ],
+    "仇": [
+      "chóu"
+    ],
+    "廊": [
+      "láng"
+    ],
+    "缆": [
+      "lǎn"
+    ],
+    "橱": [
+      "chú"
+    ],
+    "蕉": [
+      "jiāo"
+    ],
+    "董": [
+      "dǒng"
+    ],
+    "呕": [
+      "ǒu"
+    ],
+    "嘀": [
+      "dí"
+    ]
+  },
+  "lessons": [
+    {
+      "id": "old-g1s2-lesson-17",
+      "label": "旧一年级下册 · 17",
+      "originalLessonLabel": "17",
+      "originalLessonId": "lesson-17",
+      "originalBookId": "g1s2",
+      "sourceId": "old-g1s2",
+      "recognition": [
+        "鬼"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-lesson-4",
+      "label": "旧二年级上册 · 4",
+      "originalLessonLabel": "4",
+      "originalLessonId": "lesson-4",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [],
+      "writing": [
+        "秤"
+      ]
+    },
+    {
+      "id": "old-g2s1-lesson-4",
+      "label": "旧二年级上册 · 4",
+      "originalLessonLabel": "4",
+      "originalLessonId": "lesson-4",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "秤"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-lesson-5",
+      "label": "旧二年级上册 · 5",
+      "originalLessonLabel": "5",
+      "originalLessonId": "lesson-5",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "评"
+      ],
+      "writing": [
+        "评"
+      ]
+    },
+    {
+      "id": "old-g2s1-lesson-14",
+      "label": "旧二年级上册 · 14",
+      "originalLessonLabel": "14",
+      "originalLessonId": "lesson-14",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "蚜"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-lesson-19",
+      "label": "旧二年级上册 · 19",
+      "originalLessonLabel": "19",
+      "originalLessonId": "lesson-19",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "辰"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-lesson-21",
+      "label": "旧二年级上册 · 21",
+      "originalLessonLabel": "21",
+      "originalLessonId": "lesson-21",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "呛"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-garden-7",
+      "label": "旧二年级上册 · 语文园地七",
+      "originalLessonLabel": "语文园地七",
+      "originalLessonId": "garden-7",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "椰"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s1-lesson-24",
+      "label": "旧二年级上册 · 24",
+      "originalLessonLabel": "24",
+      "originalLessonId": "lesson-24",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "秧"
+      ],
+      "writing": [
+        "秧"
+      ]
+    },
+    {
+      "id": "old-g2s1-garden-8",
+      "label": "旧二年级上册 · 语文园地八",
+      "originalLessonLabel": "语文园地八",
+      "originalLessonId": "garden-8",
+      "originalBookId": "g2s1",
+      "sourceId": "old-g2s1",
+      "recognition": [
+        "羚"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-1",
+      "label": "旧二年级下册 · 1",
+      "originalLessonLabel": "1",
+      "originalLessonId": "lesson-1",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "绦"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-10",
+      "label": "旧二年级下册 · 10",
+      "originalLessonLabel": "10",
+      "originalLessonId": "lesson-10",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "驳"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-11",
+      "label": "旧二年级下册 · 11",
+      "originalLessonLabel": "11",
+      "originalLessonId": "lesson-11",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "屁",
+        "股",
+        "屎",
+        "婶"
+      ],
+      "writing": [
+        "屁",
+        "股",
+        "屎"
+      ]
+    },
+    {
+      "id": "old-g2s2-garden-4",
+      "label": "旧二年级下册 · 语文园地四",
+      "originalLessonLabel": "语文园地四",
+      "originalLessonId": "garden-4",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "陀",
+        "毽"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-garden-5",
+      "label": "旧二年级下册 · 语文园地五",
+      "originalLessonLabel": "语文园地五",
+      "originalLessonId": "garden-5",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "窑"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-15",
+      "label": "旧二年级下册 · 15",
+      "originalLessonLabel": "15",
+      "originalLessonId": "lesson-15",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "鹂"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-23",
+      "label": "旧二年级下册 · 23",
+      "originalLessonLabel": "23",
+      "originalLessonId": "lesson-23",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "蔷",
+        "薇",
+        "逮"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g2s2-lesson-24",
+      "label": "旧二年级下册 · 24",
+      "originalLessonLabel": "24",
+      "originalLessonId": "lesson-24",
+      "originalBookId": "g2s2",
+      "sourceId": "old-g2s2",
+      "recognition": [
+        "糙"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-1",
+      "label": "旧三年级上册 · 1",
+      "originalLessonLabel": "1",
+      "originalLessonId": "lesson-1",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "艳"
+      ],
+      "writing": [
+        "艳"
+      ]
+    },
+    {
+      "id": "old-g3s1-lesson-4",
+      "label": "旧三年级上册 · 4",
+      "originalLessonLabel": "4",
+      "originalLessonId": "lesson-4",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "残",
+        "君"
+      ],
+      "writing": [
+        "残",
+        "君"
+      ]
+    },
+    {
+      "id": "old-g3s1-lesson-9",
+      "label": "旧三年级上册 · 9",
+      "originalLessonLabel": "9",
+      "originalLessonId": "lesson-9",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "锯",
+        "吱"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-garden-entry-1",
+      "label": "旧三年级上册 · 语文园地（附录第1处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-1",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "孝"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-garden-entry-2",
+      "label": "旧三年级上册 · 语文园地（附录第2处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-2",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "础"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-18",
+      "label": "旧三年级上册 · 18",
+      "originalLessonLabel": "18",
+      "originalLessonId": "lesson-18",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "瑰"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-19",
+      "label": "旧三年级上册 · 19",
+      "originalLessonLabel": "19",
+      "originalLessonId": "lesson-19",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "凰"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-garden-entry-3",
+      "label": "旧三年级上册 · 语文园地（附录第3处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-3",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "蛾"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-21",
+      "label": "旧三年级上册 · 21",
+      "originalLessonLabel": "21",
+      "originalLessonId": "lesson-21",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "喳",
+        "唧"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-23",
+      "label": "旧三年级上册 · 23",
+      "originalLessonLabel": "23",
+      "originalLessonId": "lesson-23",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "畅"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s1-lesson-27",
+      "label": "旧三年级上册 · 27",
+      "originalLessonLabel": "27",
+      "originalLessonId": "lesson-27",
+      "originalBookId": "g3s1",
+      "sourceId": "old-g3s1",
+      "recognition": [
+        "曼"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-lesson-3",
+      "label": "旧三年级下册 · 3",
+      "originalLessonLabel": "3",
+      "originalLessonId": "lesson-3",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "蹈"
+      ],
+      "writing": [
+        "蹈"
+      ]
+    },
+    {
+      "id": "old-g3s2-garden-entry-1",
+      "label": "旧三年级下册 · 语文园地（附录第1处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-1",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "缭"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-lesson-6",
+      "label": "旧三年级下册 · 6",
+      "originalLessonLabel": "6",
+      "originalLessonId": "lesson-6",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "谦",
+        "懦"
+      ],
+      "writing": [
+        "谦",
+        "懦"
+      ]
+    },
+    {
+      "id": "old-g3s2-lesson-9",
+      "label": "旧三年级下册 · 9",
+      "originalLessonLabel": "9",
+      "originalLessonId": "lesson-9",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "屠",
+        "苏"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-garden-entry-2",
+      "label": "旧三年级下册 · 语文园地（附录第2处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-2",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "档",
+        "咖",
+        "啡"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-lesson-13",
+      "label": "旧三年级下册 · 13",
+      "originalLessonLabel": "13",
+      "originalLessonId": "lesson-13",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [],
+      "writing": [
+        "苏"
+      ]
+    },
+    {
+      "id": "old-g3s2-lesson-16",
+      "label": "旧三年级下册 · 16",
+      "originalLessonLabel": "16",
+      "originalLessonId": "lesson-16",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "淌",
+        "绪",
+        "篇"
+      ],
+      "writing": [
+        "淌",
+        "绪",
+        "篇"
+      ]
+    },
+    {
+      "id": "old-g3s2-lesson-19",
+      "label": "旧三年级下册 · 19",
+      "originalLessonLabel": "19",
+      "originalLessonId": "lesson-19",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "骂",
+        "仇"
+      ],
+      "writing": [
+        "鬼",
+        "骂",
+        "仇"
+      ]
+    },
+    {
+      "id": "old-g3s2-lesson-20",
+      "label": "旧三年级下册 · 20",
+      "originalLessonLabel": "20",
+      "originalLessonId": "lesson-20",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "廊"
+      ],
+      "writing": [
+        "廊"
+      ]
+    },
+    {
+      "id": "old-g3s2-garden-entry-3",
+      "label": "旧三年级下册 · 语文园地（附录第3处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-3",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "缆"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-lesson-26",
+      "label": "旧三年级下册 · 26",
+      "originalLessonLabel": "26",
+      "originalLessonId": "lesson-26",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "橱",
+        "蕉",
+        "董"
+      ],
+      "writing": []
+    },
+    {
+      "id": "old-g3s2-garden-entry-4",
+      "label": "旧三年级下册 · 语文园地（附录第4处）",
+      "originalLessonLabel": "语文园地",
+      "originalLessonId": "garden-entry-4",
+      "originalBookId": "g3s2",
+      "sourceId": "old-g3s2",
+      "recognition": [
+        "呕",
+        "嘀"
+      ],
+      "writing": []
+    }
+  ],
+  "recognitionItems": [
+    {
+      "character": "鬼",
+      "pinyin": "guǐ",
+      "lessonId": "old-g1s2-lesson-17",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g1s2",
+      "originalBookTitle": "一年级下册",
+      "originalLessonId": "lesson-17",
+      "originalLessonLabel": "17",
+      "sourceId": "old-g1s2",
+      "printedPage": 120,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "秤",
+      "pinyin": "chèng",
+      "lessonId": "old-g2s1-lesson-4",
+      "pdfPage": 117,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g2s1",
+      "printedPage": 112,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "评",
+      "pinyin": "píng",
+      "lessonId": "old-g2s1-lesson-5",
+      "pdfPage": 117,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-5",
+      "originalLessonLabel": "5",
+      "sourceId": "old-g2s1",
+      "printedPage": 112,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "蚜",
+      "pinyin": "yá",
+      "lessonId": "old-g2s1-lesson-14",
+      "pdfPage": 118,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-14",
+      "originalLessonLabel": "14",
+      "sourceId": "old-g2s1",
+      "printedPage": 113,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "辰",
+      "pinyin": "chén",
+      "lessonId": "old-g2s1-lesson-19",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g2s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "呛",
+      "pinyin": "qiàng",
+      "lessonId": "old-g2s1-lesson-21",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-21",
+      "originalLessonLabel": "21",
+      "sourceId": "old-g2s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "椰",
+      "pinyin": "yē",
+      "lessonId": "old-g2s1-garden-7",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "garden-7",
+      "originalLessonLabel": "语文园地七",
+      "sourceId": "old-g2s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "秧",
+      "pinyin": "yāng",
+      "lessonId": "old-g2s1-lesson-24",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-24",
+      "originalLessonLabel": "24",
+      "sourceId": "old-g2s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "羚",
+      "pinyin": "líng",
+      "lessonId": "old-g2s1-garden-8",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "garden-8",
+      "originalLessonLabel": "语文园地八",
+      "sourceId": "old-g2s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "绦",
+      "pinyin": "tāo",
+      "lessonId": "old-g2s2-lesson-1",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-1",
+      "originalLessonLabel": "1",
+      "sourceId": "old-g2s2",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "驳",
+      "pinyin": "bó",
+      "lessonId": "old-g2s2-lesson-10",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-10",
+      "originalLessonLabel": "10",
+      "sourceId": "old-g2s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "屁",
+      "pinyin": "pì",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "股",
+      "pinyin": "gǔ",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "屎",
+      "pinyin": "shǐ",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "婶",
+      "pinyin": "shěn",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "陀",
+      "pinyin": "tuó",
+      "lessonId": "old-g2s2-garden-4",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "garden-4",
+      "originalLessonLabel": "语文园地四",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "毽",
+      "pinyin": "jiàn",
+      "lessonId": "old-g2s2-garden-4",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "garden-4",
+      "originalLessonLabel": "语文园地四",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "窑",
+      "pinyin": "yáo",
+      "lessonId": "old-g2s2-garden-5",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "garden-5",
+      "originalLessonLabel": "语文园地五",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "鹂",
+      "pinyin": "lí",
+      "lessonId": "old-g2s2-lesson-15",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-15",
+      "originalLessonLabel": "15",
+      "sourceId": "old-g2s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "蔷",
+      "pinyin": "qiáng",
+      "lessonId": "old-g2s2-lesson-23",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-23",
+      "originalLessonLabel": "23",
+      "sourceId": "old-g2s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "薇",
+      "pinyin": "wēi",
+      "lessonId": "old-g2s2-lesson-23",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-23",
+      "originalLessonLabel": "23",
+      "sourceId": "old-g2s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "逮",
+      "pinyin": "dǎi",
+      "lessonId": "old-g2s2-lesson-23",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-23",
+      "originalLessonLabel": "23",
+      "sourceId": "old-g2s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "糙",
+      "pinyin": "cāo",
+      "lessonId": "old-g2s2-lesson-24",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-24",
+      "originalLessonLabel": "24",
+      "sourceId": "old-g2s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "艳",
+      "pinyin": "yàn",
+      "lessonId": "old-g3s1-lesson-1",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-1",
+      "originalLessonLabel": "1",
+      "sourceId": "old-g3s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "残",
+      "pinyin": "cán",
+      "lessonId": "old-g3s1-lesson-4",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g3s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "君",
+      "pinyin": "jūn",
+      "lessonId": "old-g3s1-lesson-4",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g3s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "锯",
+      "pinyin": "jù",
+      "lessonId": "old-g3s1-lesson-9",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-9",
+      "originalLessonLabel": "9",
+      "sourceId": "old-g3s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "吱",
+      "pinyin": "zhī",
+      "lessonId": "old-g3s1-lesson-9",
+      "pdfPage": 119,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-9",
+      "originalLessonLabel": "9",
+      "sourceId": "old-g3s1",
+      "printedPage": 114,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "孝",
+      "pinyin": "xiào",
+      "lessonId": "old-g3s1-garden-entry-1",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "garden-entry-1",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "础",
+      "pinyin": "chǔ",
+      "lessonId": "old-g3s1-garden-entry-2",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "garden-entry-2",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "瑰",
+      "pinyin": "guī",
+      "lessonId": "old-g3s1-lesson-18",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-18",
+      "originalLessonLabel": "18",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "凰",
+      "pinyin": "huáng",
+      "lessonId": "old-g3s1-lesson-19",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "蛾",
+      "pinyin": "é",
+      "lessonId": "old-g3s1-garden-entry-3",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "garden-entry-3",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "喳",
+      "pinyin": "zhā",
+      "lessonId": "old-g3s1-lesson-21",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-21",
+      "originalLessonLabel": "21",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "唧",
+      "pinyin": "jī",
+      "lessonId": "old-g3s1-lesson-21",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-21",
+      "originalLessonLabel": "21",
+      "sourceId": "old-g3s1",
+      "printedPage": 115,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "畅",
+      "pinyin": "chàng",
+      "lessonId": "old-g3s1-lesson-23",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-23",
+      "originalLessonLabel": "23",
+      "sourceId": "old-g3s1",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "曼",
+      "pinyin": "màn",
+      "lessonId": "old-g3s1-lesson-27",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-27",
+      "originalLessonLabel": "27",
+      "sourceId": "old-g3s1",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "蹈",
+      "pinyin": "dǎo",
+      "lessonId": "old-g3s2-lesson-3",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-3",
+      "originalLessonLabel": "3",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "缭",
+      "pinyin": "liáo",
+      "lessonId": "old-g3s2-garden-entry-1",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-1",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "谦",
+      "pinyin": "qiān",
+      "lessonId": "old-g3s2-lesson-6",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-6",
+      "originalLessonLabel": "6",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "懦",
+      "pinyin": "nuò",
+      "lessonId": "old-g3s2-lesson-6",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-6",
+      "originalLessonLabel": "6",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "屠",
+      "pinyin": "tú",
+      "lessonId": "old-g3s2-lesson-9",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-9",
+      "originalLessonLabel": "9",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "苏",
+      "pinyin": "sū",
+      "lessonId": "old-g3s2-lesson-9",
+      "pdfPage": 121,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-9",
+      "originalLessonLabel": "9",
+      "sourceId": "old-g3s2",
+      "printedPage": 116,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "档",
+      "pinyin": "dàng",
+      "lessonId": "old-g3s2-garden-entry-2",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-2",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "咖",
+      "pinyin": "kā",
+      "lessonId": "old-g3s2-garden-entry-2",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-2",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "啡",
+      "pinyin": "fēi",
+      "lessonId": "old-g3s2-garden-entry-2",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-2",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "淌",
+      "pinyin": "tǎng",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "绪",
+      "pinyin": "xù",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "篇",
+      "pinyin": "piān",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "骂",
+      "pinyin": "mà",
+      "lessonId": "old-g3s2-lesson-19",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "仇",
+      "pinyin": "chóu",
+      "lessonId": "old-g3s2-lesson-19",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "廊",
+      "pinyin": "láng",
+      "lessonId": "old-g3s2-lesson-20",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-20",
+      "originalLessonLabel": "20",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "缆",
+      "pinyin": "lǎn",
+      "lessonId": "old-g3s2-garden-entry-3",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-3",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 117,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "橱",
+      "pinyin": "chú",
+      "lessonId": "old-g3s2-lesson-26",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-26",
+      "originalLessonLabel": "26",
+      "sourceId": "old-g3s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "蕉",
+      "pinyin": "jiāo",
+      "lessonId": "old-g3s2-lesson-26",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-26",
+      "originalLessonLabel": "26",
+      "sourceId": "old-g3s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "董",
+      "pinyin": "dǒng",
+      "lessonId": "old-g3s2-lesson-26",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-26",
+      "originalLessonLabel": "26",
+      "sourceId": "old-g3s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "呕",
+      "pinyin": "ǒu",
+      "lessonId": "old-g3s2-garden-entry-4",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-4",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "嘀",
+      "pinyin": "dí",
+      "lessonId": "old-g3s2-garden-entry-4",
+      "pdfPage": 123,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "garden-entry-4",
+      "originalLessonLabel": "语文园地",
+      "sourceId": "old-g3s2",
+      "printedPage": 118,
+      "table": "recognition",
+      "pinyinSource": "printed-appendix"
+    }
+  ],
+  "writingItems": [
+    {
+      "character": "秤",
+      "pinyin": "chèng",
+      "lessonId": "old-g2s1-lesson-4",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g2s1",
+      "printedPage": 115,
+      "table": "writing",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "评",
+      "pinyin": "píng",
+      "lessonId": "old-g2s1-lesson-5",
+      "pdfPage": 120,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-5",
+      "originalLessonLabel": "5",
+      "sourceId": "old-g2s1",
+      "printedPage": 115,
+      "table": "writing",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "秧",
+      "pinyin": "yāng",
+      "lessonId": "old-g2s1-lesson-24",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s1",
+      "originalBookTitle": "二年级上册",
+      "originalLessonId": "lesson-24",
+      "originalLessonLabel": "24",
+      "sourceId": "old-g2s1",
+      "printedPage": 117,
+      "table": "writing",
+      "pinyinSource": "printed-appendix"
+    },
+    {
+      "character": "屁",
+      "pinyin": "",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "股",
+      "pinyin": "",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "屎",
+      "pinyin": "",
+      "lessonId": "old-g2s2-lesson-11",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g2s2",
+      "originalBookTitle": "二年级下册",
+      "originalLessonId": "lesson-11",
+      "originalLessonLabel": "11",
+      "sourceId": "old-g2s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "艳",
+      "pinyin": "",
+      "lessonId": "old-g3s1-lesson-1",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-1",
+      "originalLessonLabel": "1",
+      "sourceId": "old-g3s1",
+      "printedPage": 117,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "残",
+      "pinyin": "",
+      "lessonId": "old-g3s1-lesson-4",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g3s1",
+      "printedPage": 117,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "君",
+      "pinyin": "",
+      "lessonId": "old-g3s1-lesson-4",
+      "pdfPage": 122,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s1",
+      "originalBookTitle": "三年级上册",
+      "originalLessonId": "lesson-4",
+      "originalLessonLabel": "4",
+      "sourceId": "old-g3s1",
+      "printedPage": 117,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "蹈",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-3",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-3",
+      "originalLessonLabel": "3",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "谦",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-6",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-6",
+      "originalLessonLabel": "6",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "懦",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-6",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-6",
+      "originalLessonLabel": "6",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "苏",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-13",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-13",
+      "originalLessonLabel": "13",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "淌",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "绪",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "篇",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-16",
+      "pdfPage": 124,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-16",
+      "originalLessonLabel": "16",
+      "sourceId": "old-g3s2",
+      "printedPage": 119,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "鬼",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-19",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "骂",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-19",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "仇",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-19",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-19",
+      "originalLessonLabel": "19",
+      "sourceId": "old-g3s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    },
+    {
+      "character": "廊",
+      "pinyin": "",
+      "lessonId": "old-g3s2-lesson-20",
+      "pdfPage": 125,
+      "previouslyLearnedReading": false,
+      "originalBookId": "g3s2",
+      "originalBookTitle": "三年级下册",
+      "originalLessonId": "lesson-20",
+      "originalLessonLabel": "20",
+      "sourceId": "old-g3s2",
+      "printedPage": 120,
+      "table": "writing",
+      "pinyinSource": null
+    }
+  ],
+  "characterSources": {
+    "鬼": [
+      {
+        "originalBookId": "g1s2",
+        "sourceId": "old-g1s2",
+        "table": "recognition",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g1s2-lesson-17",
+        "originalLessonLabel": "17",
+        "pinyin": "guǐ"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g3s2-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": ""
+      }
+    ],
+    "秤": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 117,
+        "printedPage": 112,
+        "lessonId": "old-g2s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": "chèng"
+      },
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "writing",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g2s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": "chèng"
+      }
+    ],
+    "评": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 117,
+        "printedPage": 112,
+        "lessonId": "old-g2s1-lesson-5",
+        "originalLessonLabel": "5",
+        "pinyin": "píng"
+      },
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "writing",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g2s1-lesson-5",
+        "originalLessonLabel": "5",
+        "pinyin": "píng"
+      }
+    ],
+    "蚜": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 118,
+        "printedPage": 113,
+        "lessonId": "old-g2s1-lesson-14",
+        "originalLessonLabel": "14",
+        "pinyin": "yá"
+      }
+    ],
+    "辰": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g2s1-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": "chén"
+      }
+    ],
+    "呛": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g2s1-lesson-21",
+        "originalLessonLabel": "21",
+        "pinyin": "qiàng"
+      }
+    ],
+    "椰": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g2s1-garden-7",
+        "originalLessonLabel": "语文园地七",
+        "pinyin": "yē"
+      }
+    ],
+    "秧": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g2s1-lesson-24",
+        "originalLessonLabel": "24",
+        "pinyin": "yāng"
+      },
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "writing",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s1-lesson-24",
+        "originalLessonLabel": "24",
+        "pinyin": "yāng"
+      }
+    ],
+    "羚": [
+      {
+        "originalBookId": "g2s1",
+        "sourceId": "old-g2s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g2s1-garden-8",
+        "originalLessonLabel": "语文园地八",
+        "pinyin": "líng"
+      }
+    ],
+    "绦": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g2s2-lesson-1",
+        "originalLessonLabel": "1",
+        "pinyin": "tāo"
+      }
+    ],
+    "驳": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g2s2-lesson-10",
+        "originalLessonLabel": "10",
+        "pinyin": "bó"
+      }
+    ],
+    "屁": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": "pì"
+      },
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": ""
+      }
+    ],
+    "股": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": "gǔ"
+      },
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": ""
+      }
+    ],
+    "屎": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": "shǐ"
+      },
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": ""
+      }
+    ],
+    "婶": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-lesson-11",
+        "originalLessonLabel": "11",
+        "pinyin": "shěn"
+      }
+    ],
+    "陀": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-garden-4",
+        "originalLessonLabel": "语文园地四",
+        "pinyin": "tuó"
+      }
+    ],
+    "毽": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-garden-4",
+        "originalLessonLabel": "语文园地四",
+        "pinyin": "jiàn"
+      }
+    ],
+    "窑": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-garden-5",
+        "originalLessonLabel": "语文园地五",
+        "pinyin": "yáo"
+      }
+    ],
+    "鹂": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g2s2-lesson-15",
+        "originalLessonLabel": "15",
+        "pinyin": "lí"
+      }
+    ],
+    "蔷": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g2s2-lesson-23",
+        "originalLessonLabel": "23",
+        "pinyin": "qiáng"
+      }
+    ],
+    "薇": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g2s2-lesson-23",
+        "originalLessonLabel": "23",
+        "pinyin": "wēi"
+      }
+    ],
+    "逮": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g2s2-lesson-23",
+        "originalLessonLabel": "23",
+        "pinyin": "dǎi"
+      }
+    ],
+    "糙": [
+      {
+        "originalBookId": "g2s2",
+        "sourceId": "old-g2s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g2s2-lesson-24",
+        "originalLessonLabel": "24",
+        "pinyin": "cāo"
+      }
+    ],
+    "艳": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g3s1-lesson-1",
+        "originalLessonLabel": "1",
+        "pinyin": "yàn"
+      },
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "writing",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s1-lesson-1",
+        "originalLessonLabel": "1",
+        "pinyin": ""
+      }
+    ],
+    "残": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g3s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": "cán"
+      },
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "writing",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": ""
+      }
+    ],
+    "君": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g3s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": "jūn"
+      },
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "writing",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s1-lesson-4",
+        "originalLessonLabel": "4",
+        "pinyin": ""
+      }
+    ],
+    "锯": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g3s1-lesson-9",
+        "originalLessonLabel": "9",
+        "pinyin": "jù"
+      }
+    ],
+    "吱": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 119,
+        "printedPage": 114,
+        "lessonId": "old-g3s1-lesson-9",
+        "originalLessonLabel": "9",
+        "pinyin": "zhī"
+      }
+    ],
+    "孝": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-garden-entry-1",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "xiào"
+      }
+    ],
+    "础": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-garden-entry-2",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "chǔ"
+      }
+    ],
+    "瑰": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-lesson-18",
+        "originalLessonLabel": "18",
+        "pinyin": "guī"
+      }
+    ],
+    "凰": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": "huáng"
+      }
+    ],
+    "蛾": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-garden-entry-3",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "é"
+      }
+    ],
+    "喳": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-lesson-21",
+        "originalLessonLabel": "21",
+        "pinyin": "zhā"
+      }
+    ],
+    "唧": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 120,
+        "printedPage": 115,
+        "lessonId": "old-g3s1-lesson-21",
+        "originalLessonLabel": "21",
+        "pinyin": "jī"
+      }
+    ],
+    "畅": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s1-lesson-23",
+        "originalLessonLabel": "23",
+        "pinyin": "chàng"
+      }
+    ],
+    "曼": [
+      {
+        "originalBookId": "g3s1",
+        "sourceId": "old-g3s1",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s1-lesson-27",
+        "originalLessonLabel": "27",
+        "pinyin": "màn"
+      }
+    ],
+    "蹈": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-lesson-3",
+        "originalLessonLabel": "3",
+        "pinyin": "dǎo"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-3",
+        "originalLessonLabel": "3",
+        "pinyin": ""
+      }
+    ],
+    "缭": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-garden-entry-1",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "liáo"
+      }
+    ],
+    "谦": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-lesson-6",
+        "originalLessonLabel": "6",
+        "pinyin": "qiān"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-6",
+        "originalLessonLabel": "6",
+        "pinyin": ""
+      }
+    ],
+    "懦": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-lesson-6",
+        "originalLessonLabel": "6",
+        "pinyin": "nuò"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-6",
+        "originalLessonLabel": "6",
+        "pinyin": ""
+      }
+    ],
+    "屠": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-lesson-9",
+        "originalLessonLabel": "9",
+        "pinyin": "tú"
+      }
+    ],
+    "苏": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 121,
+        "printedPage": 116,
+        "lessonId": "old-g3s2-lesson-9",
+        "originalLessonLabel": "9",
+        "pinyin": "sū"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-13",
+        "originalLessonLabel": "13",
+        "pinyin": ""
+      }
+    ],
+    "档": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-garden-entry-2",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "dàng"
+      }
+    ],
+    "咖": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-garden-entry-2",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "kā"
+      }
+    ],
+    "啡": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-garden-entry-2",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "fēi"
+      }
+    ],
+    "淌": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": "tǎng"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": ""
+      }
+    ],
+    "绪": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": "xù"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": ""
+      }
+    ],
+    "篇": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": "piān"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 124,
+        "printedPage": 119,
+        "lessonId": "old-g3s2-lesson-16",
+        "originalLessonLabel": "16",
+        "pinyin": ""
+      }
+    ],
+    "骂": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": "mà"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g3s2-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": ""
+      }
+    ],
+    "仇": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": "chóu"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g3s2-lesson-19",
+        "originalLessonLabel": "19",
+        "pinyin": ""
+      }
+    ],
+    "廊": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-lesson-20",
+        "originalLessonLabel": "20",
+        "pinyin": "láng"
+      },
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "writing",
+        "pdfPage": 125,
+        "printedPage": 120,
+        "lessonId": "old-g3s2-lesson-20",
+        "originalLessonLabel": "20",
+        "pinyin": ""
+      }
+    ],
+    "缆": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 122,
+        "printedPage": 117,
+        "lessonId": "old-g3s2-garden-entry-3",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "lǎn"
+      }
+    ],
+    "橱": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g3s2-lesson-26",
+        "originalLessonLabel": "26",
+        "pinyin": "chú"
+      }
+    ],
+    "蕉": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g3s2-lesson-26",
+        "originalLessonLabel": "26",
+        "pinyin": "jiāo"
+      }
+    ],
+    "董": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g3s2-lesson-26",
+        "originalLessonLabel": "26",
+        "pinyin": "dǒng"
+      }
+    ],
+    "呕": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g3s2-garden-entry-4",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "ǒu"
+      }
+    ],
+    "嘀": [
+      {
+        "originalBookId": "g3s2",
+        "sourceId": "old-g3s2",
+        "table": "recognition",
+        "pdfPage": 123,
+        "printedPage": 118,
+        "lessonId": "old-g3s2-garden-entry-4",
+        "originalLessonLabel": "语文园地",
+        "pinyin": "dí"
+      }
+    ]
+  },
+  "notes": [
+    "这58字来自已核验旧版字表，但不在现有十二册课程的2973个不同汉字中；单独补充，不改动原有各册分组。",
+    "按旧版一年级上至三年级下的册别和附录课次首次出现顺序排列；同字多处出现只学习一次，所有原书识字/写字出处均保留。",
+    "全部58字均有原书识字表印刷注音；字音通过独立PDF文字序列核对，没有使用字典默认音替代原书读音。",
+    "写字表本身没有注音的条目保留空拼音；readings使用该字的原书识字表注音。",
+    "语文园地未印单元序号时，garden-entry标识只表示该识字表中园地的出现次序，不冒充教材单元号。",
+    "这是一份跨版本差异补充清单，不是出版社原有的一册书或2026全套最新字表，因此printedCounts为null；每份来源中的printedCounts仍是对应原书全表总数。",
+    "加上现有十二册后覆盖3031个不同汉字；仍不能据此宣称2026最新版全套教材已完整核验。"
+  ]
+}

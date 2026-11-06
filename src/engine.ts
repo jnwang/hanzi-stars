@@ -93,7 +93,7 @@ export function lightStar(progress: Progress, session: Session, level: Level, bo
 export function validateProgress(value: unknown, curriculum: Curriculum): Progress {
   if (!value || typeof value !== 'object') throw new Error('这不是有效的学习记录。');
   const p = value as Progress;
-  if (p.schema !== 1 || p.curriculumVersion !== curriculum.version) throw new Error('这份记录与当前字库版本不同，请保留原备份。');
+  if (p.schema !== 1 || (p.curriculumVersion !== curriculum.version && !curriculum.legacyVersions?.includes(p.curriculumVersion))) throw new Error('这份记录与当前字库版本不同，请保留原备份。');
   if (!p.completed || typeof p.completed !== 'object' || Array.isArray(p.completed) || !p.sessions || typeof p.sessions !== 'object' || Array.isArray(p.sessions) || !Array.isArray(p.days) || typeof p.updatedAt !== 'string' || (p.lastLevel !== null && typeof p.lastLevel !== 'string')) throw new Error('学习记录格式不完整。');
   const allLevels = curriculum.books.flatMap(levelsFor);
   const bookIds = new Set(curriculum.books.map(b => b.id));
@@ -130,5 +130,5 @@ export function validateProgress(value: unknown, curriculum: Curriculum): Progre
     if (!isUnlocked(p, level, curriculum.books.find(b => b.id === level.bookId)!)) throw new Error('练习关卡尚未解锁。');
   }
   if (p.days.some(d => typeof d !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(d)) || new Set(p.days).size !== p.days.length || (p.lastLevel !== null && !allLevels.some(l => l.id === p.lastLevel))) throw new Error('学习日期或位置无效。');
-  return structuredClone(p);
+  return structuredClone({...p,curriculumVersion:curriculum.version});
 }

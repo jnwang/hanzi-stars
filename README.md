@@ -51,7 +51,7 @@ npm run publish:pages
 
 1. 首页右上角 → 学习记录 → 跨设备同步。
 2. 私有记录仓库已准备为 `jnwang/hanzi-stars-progress`；也可填写自己的私有仓库（先创建 README）。
-3. 在 GitHub 创建 **Fine-grained personal access token**，Repository access 选择 **Only select repositories**，只选择记录仓库。Repository permissions 仅添加 **Contents: Read and write**，设置到期日。
+3. 在 GitHub 创建 **Fine-grained personal access token**，Repository access 选择 **Only select repositories**，只选择记录仓库。Repository permissions 仅添加 **Contents: Read and write**，按需选择到期日或 No expiration。
 4. 将密钥填入网站，点“连接并开启自动同步”。每台设备首次各配置一次，建议使用不同密钥。
 
 连接密钥只保存在该浏览器的本地存储，直接用于请求 `api.github.com`，不会放入网址、学习记录导出文件或公开仓库。密钥具有所选仓库的文件读写能力，按 [GitHub 文档](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) 只授予记录仓库权限。不要把密钥发到聊天中。
@@ -66,7 +66,9 @@ Safari 网站存储可能被用户清理或系统回收；参见 [WebKit 存储�
 
 ## 字库与版本
 
-目前提供十二册，共 **4,630 个册内字位、2,973 个不同汉字、466 颗星**。合并每册识字表和写字表，册内去重；跨册重复的字保留各册练习，因此册内字位多于全库不同汉字数。
+目前提供十二册及独立「补充字」课程，共 **4,688 个学习字位、3,031 个不同汉字、472 颗星**。原十二册合并每册识字表和写字表，册内去重；跨册重复的字保留各册练习，因此学习字位多于全库不同汉字数。
+
+补充课程收录核验旧版全套字表后发现的 **58 个版本差异字，分为 6 颗星**，同样必须完成认读和独立书写。它不改变原十二册的分组。逐字核验方法、数量解释及覆盖边界见 [完整性复核报告](data/CURRICULUM-AUDIT.md)。
 
 **一至三年级使用已核对的 2022 课标修订教材存档；四至六年级使用已核对的旧版统编教材存档，并非 2026 修订版。** 各册版次、页码、来源与数量详见 [data/SOURCES.md](data/SOURCES.md)。完整教材 PDF 仅用于本地核验，不发布。
 
@@ -85,7 +87,7 @@ node scripts/check-assets.mjs
 
 ## 进度与书写判定
 
-进度按字库内容版本分开保存，字库变化不会将旧的已完成关卡套用到新的分组。导入前验证字库版本、关卡顺序和认读记录，成功导入前会保存一份原记录。存储不可用或容量不足时明确提示，损坏的原记录不会被静默覆盖。
+进度按字库内容版本分开保存。此次只追加独立补充课程，原十二册的汉字、读音、选项和分组完全不变，因此本机旧记录、旧导出备份和旧云端文件可自动升级，保留原星星和中途练习。旧存储项与旧云端文件继续保留。其他不兼容版本仍拒绝导入；不会把旧星星套用到不同分组。导入前验证字库版本、关卡顺序和认读记录，成功导入前会保存一份原记录。存储不可用或容量不足时明确提示，损坏的原记录不会被静默覆盖。
 
 一颗星代表完成本关的屏幕认读和书写练习；独立纸笔书写与长期记忆仍需在日常阅读、作业中使用和复习。
 

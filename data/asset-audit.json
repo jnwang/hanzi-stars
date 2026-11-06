@@ -1,5 +1,5 @@
 {
-  "version": "pep-a2db7b770e2f007d",
+  "version": "pep-8de8dc1ee74e1973",
   "books": [
     {
       "id": "g1s1",
@@ -60,10 +60,15 @@
       "id": "g6s2",
       "characters": 120,
       "stars": 12
+    },
+    {
+      "id": "supplement",
+      "characters": 58,
+      "stars": 6
     }
   ],
-  "totalStars": 466,
-  "uniqueCharacters": 2973,
-  "audioClips": 3100,
+  "totalStars": 472,
+  "uniqueCharacters": 3031,
+  "audioClips": 3158,
   "missingContexts": []
 }

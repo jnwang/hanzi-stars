@@ -1,0 +1,441 @@
+{
+  "date": "2026-11-06",
+  "scope": "Appendix character tables in the 12 archived source PDFs; not all 2026 revised editions",
+  "curriculumVersion": "pep-a2db7b770e2f007d",
+  "books": [
+    {
+      "id": "g1s1",
+      "sha256MatchesSource": true,
+      "unionCount": 280,
+      "stars": 28,
+      "lastStarSize": 10,
+      "lastStarCharacters": "答方久更牛羊爪元拼音",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            110,
+            112
+          ],
+          "printedCount": 280,
+          "rawCount": 284,
+          "uniqueCount": 280,
+          "blueCount": 4,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            113,
+            113
+          ],
+          "printedCount": 100,
+          "rawCount": 100,
+          "uniqueCount": 100,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g1s2",
+      "sha256MatchesSource": true,
+      "unionCount": 495,
+      "stars": 50,
+      "lastStarSize": 5,
+      "lastStarCharacters": "胖票户交父",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            119,
+            121
+          ],
+          "printedCount": 410,
+          "rawCount": 419,
+          "uniqueCount": 413,
+          "blueCount": 9,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            122,
+            124
+          ],
+          "printedCount": 200,
+          "rawCount": 200,
+          "uniqueCount": 200,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g2s1",
+      "sha256MatchesSource": true,
+      "unionCount": 609,
+      "stars": 61,
+      "lastStarSize": 9,
+      "lastStarCharacters": "鹤蛇鸽蚕蚯蚓骆驼狮",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            113,
+            117
+          ],
+          "printedCount": 460,
+          "rawCount": 480,
+          "uniqueCount": 476,
+          "blueCount": 20,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            118,
+            120
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g2s2",
+      "sha256MatchesSource": true,
+      "unionCount": 593,
+      "stars": 60,
+      "lastStarSize": 3,
+      "lastStarCharacters": "灿垮坟",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            118,
+            121
+          ],
+          "printedCount": 450,
+          "rawCount": 465,
+          "uniqueCount": 463,
+          "blueCount": 15,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            122,
+            124
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g3s1",
+      "sha256MatchesSource": true,
+      "unionCount": 428,
+      "stars": 43,
+      "lastStarSize": 8,
+      "lastStarCharacters": "束缸还顿灶沾锅侦",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            114,
+            116
+          ],
+          "printedCount": 250,
+          "rawCount": 276,
+          "uniqueCount": 274,
+          "blueCount": 26,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            117,
+            118
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g3s2",
+      "sha256MatchesSource": true,
+      "unionCount": 405,
+      "stars": 41,
+      "lastStarSize": 5,
+      "lastStarCharacters": "叨吆讽诫辩",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            116,
+            118
+          ],
+          "printedCount": 250,
+          "rawCount": 275,
+          "uniqueCount": 275,
+          "blueCount": 25,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            119,
+            120
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g4s1",
+      "sha256MatchesSource": true,
+      "unionCount": 429,
+      "stars": 43,
+      "lastStarSize": 9,
+      "lastStarCharacters": "键谱锈沫砖矿综氧俱",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            128,
+            130
+          ],
+          "printedCount": 250,
+          "rawCount": 271,
+          "uniqueCount": 270,
+          "blueCount": 21,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            131,
+            132
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g4s2",
+      "sha256MatchesSource": true,
+      "unionCount": 423,
+      "stars": 43,
+      "lastStarSize": 3,
+      "lastStarCharacters": "抚鲸恰",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            142,
+            144
+          ],
+          "printedCount": 250,
+          "rawCount": 269,
+          "uniqueCount": 266,
+          "blueCount": 19,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            145,
+            146
+          ],
+          "printedCount": 250,
+          "rawCount": 250,
+          "uniqueCount": 250,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g5s1",
+      "sha256MatchesSource": true,
+      "unionCount": 359,
+      "stars": 36,
+      "lastStarSize": 9,
+      "lastStarCharacters": "偿甸悟馈磁酵皎鉴沥",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            122,
+            124
+          ],
+          "printedCount": 200,
+          "rawCount": 216,
+          "uniqueCount": 216,
+          "blueCount": 16,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            125,
+            126
+          ],
+          "printedCount": 220,
+          "rawCount": 220,
+          "uniqueCount": 220,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g5s2",
+      "sha256MatchesSource": true,
+      "unionCount": 309,
+      "stars": 31,
+      "lastStarSize": 9,
+      "lastStarCharacters": "祸患赋痴绞嘿伊娜窘",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": {
+          "pdfPages": [
+            124,
+            125
+          ],
+          "printedCount": 200,
+          "rawCount": 212,
+          "uniqueCount": 211,
+          "blueCount": 12,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        },
+        "writing": {
+          "pdfPages": [
+            126,
+            127
+          ],
+          "printedCount": 180,
+          "rawCount": 180,
+          "uniqueCount": 180,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g6s1",
+      "sha256MatchesSource": true,
+      "unionCount": 180,
+      "stars": 18,
+      "lastStarSize": 10,
+      "lastStarCharacters": "综澄萍漾削瞬凝骤掷陡",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": null,
+        "writing": {
+          "pdfPages": [
+            135,
+            136
+          ],
+          "printedCount": 180,
+          "rawCount": 180,
+          "uniqueCount": 180,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    },
+    {
+      "id": "g6s2",
+      "sha256MatchesSource": true,
+      "unionCount": 120,
+      "stars": 12,
+      "lastStarSize": 10,
+      "lastStarCharacters": "蚯蚓版阶吠脆拦恶蟋蟀",
+      "missingInPublic": [],
+      "extraInPublic": [],
+      "publicDuplicateCount": 0,
+      "publicOrderMatchesSource": true,
+      "tables": {
+        "recognition": null,
+        "writing": {
+          "pdfPages": [
+            126,
+            126
+          ],
+          "printedCount": 120,
+          "rawCount": 120,
+          "uniqueCount": 120,
+          "blueCount": 0,
+          "printedCountMatches": true,
+          "independentExtractorsAgree": true
+        }
+      }
+    }
+  ]
+}

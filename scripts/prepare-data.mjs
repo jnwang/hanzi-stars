@@ -5,6 +5,8 @@ import { pinyin, polyphonic, convert } from 'pinyin-pro';
 
 const root=process.cwd();
 const source=JSON.parse(await fs.readFile('data/curriculum-source.json','utf8'));
+const supplemental=JSON.parse(await fs.readFile('data/supplemental-source.json','utf8'));
+source.books.push(supplemental);
 const contexts=JSON.parse(await fs.readFile('data/pronunciation-contexts.json','utf8'));
 const allCharacters=[...new Set(source.books.flatMap(b=>b.orderedCharacters))];
 const firstReadings={};
@@ -12,7 +14,8 @@ for(const book of source.books)for(const [c,reading] of Object.entries(book.read
 const normalize=p=>p.trim().normalize('NFC').toLowerCase();
 const legal=new Map();
 for(const char of allCharacters)legal.set(char,[...new Set(polyphonic(char,{type:'array'})[0].map(normalize))]);
-const syllables=[...new Set([...legal.values()].flat())].sort();
+const coreCharacters=[...new Set(source.books.filter(b=>b.id!=='supplement').flatMap(b=>b.orderedCharacters))];
+const syllables=[...new Set(coreCharacters.flatMap(c=>legal.get(c)))].sort();
 const plainCache=new Map();
 const plain=p=>{if(!plainCache.has(p))plainCache.set(p,convert(p,{format:'toneNone'}));return plainCache.get(p);};
 const initial=p=>plain(p).match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])/u)?.[0]||'';
@@ -57,12 +60,17 @@ for(const book of source.books){
     characters.push({id:hanzi,hanzi,pinyin:reading,word,polyphonic:isPoly,distractors:distractors(hanzi,reading),audio,stroke});
   }
   if(new Set(characters.map(c=>c.id)).size!==characters.length)throw new Error(`册内重复：${book.id}`);
-  books.push({id:book.id,grade:book.grade,term:book.term,title:book.title,edition:book.edition,notes:book.notes||[],sources:book.sources,characters});
+  const recognition=new Set(book.recognition),writing=new Set(book.writing);
+  const coverage={recognition:recognition.size,writing:writing.size,overlap:[...writing].filter(c=>recognition.has(c)).length,printedNew:book.printedCounts?.newRecognition??null};
+  books.push({id:book.id,grade:book.grade,term:book.term,title:book.title,edition:book.edition,notes:book.notes||[],sources:book.sources,characters,coverage});
 }
 if(unusualReadings.length)throw new Error(`未核对读音：${JSON.stringify(unusualReadings)}`);
 if(missingStrokes.length)throw new Error(`缺少笔顺：${[...new Set(missingStrokes)].join('')}`);
-const version=`pep-${sha(JSON.stringify(books.map(b=>({id:b.id,edition:b.edition,characters:b.characters.map(c=>[c.id,c.pinyin,c.word,c.distractors])}))))}`;
-const curriculum={version,books};
+const contentVersion=values=>`pep-${sha(JSON.stringify(values.map(b=>({id:b.id,edition:b.edition,characters:b.characters.map(c=>[c.id,c.pinyin,c.word,c.distractors])}))))}`;
+const version=contentVersion(books);
+// Adding a separate supplement preserves every original level's characters and IDs.
+// Only that exact original content version is eligible for automatic migration.
+const curriculum={version,books,legacyVersions:[contentVersion(books.filter(b=>b.id!=='supplement'))]};
 await fs.writeFile('public/data/curriculum.json',JSON.stringify(curriculum));
 const ui={reading:'看看这个字，选出它的拼音。','reading-pass':'这些字都认对啦。接下来写一写。','reading-retry':'我们只练刚才答错的字。',trace:'先看一遍笔顺，再跟着写。',recall:'现在把范字藏起来，听一听，自己写出来。',done:'这一关认字和写字都完成啦！点亮一颗星星。'};
 for(const [id,text] of Object.entries(ui))audioJobs.set(`audio/ui/${id}.mp3`,{file:`audio/ui/${id}.mp3`,text});

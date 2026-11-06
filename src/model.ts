@@ -17,8 +17,9 @@ export interface Book {
   notes: string[];
   sources: { title?: string; url: string }[];
   characters: Character[];
+  coverage?: { recognition: number; writing: number; overlap: number; printedNew: number | null };
 }
-export interface Curriculum { version: string; books: Book[] }
+export interface Curriculum { version: string; books: Book[]; legacyVersions?: string[] }
 export interface Level { id: string; index: number; bookId: string; characters: Character[] }
 export type Stage = 'preview' | 'reading' | 'reading-result' | 'trace' | 'recall' | 'done';
 export interface Answer { id: string; selected: string; correct: boolean }

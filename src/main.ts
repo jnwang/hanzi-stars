@@ -15,6 +15,7 @@ let curriculum: Curriculum, progress: Progress, store: ProgressStore;
 let sync: GitHubSync, pendingCloud: Progress | null = null;
 let generation = 0;
 let writer: HanziWriter | null = null;
+let writerResize: ResizeObserver | null = null;
 let feedback: { character: Character; selected: string; correct: boolean; choices: string[] } | null = null;
 let writeMistakes = 0, usedHint = false, writeFinished = false, writeBusy = false, writeRecorded = false;
 let followSequence = 0;
@@ -90,6 +91,8 @@ function home(): void {
     const levels = books.flatMap(levelsFor), done = levels.filter(l=>isComplete(progress,l)).length;
     return `<button class="grade-card ${up&&down?'complete':''}" data-go="#/grade/${i+1}" aria-label="${name}年级，上学期${up?'完成':'未完成'}，下学期${down?'完成':'未完成'}"><span class="grade-medal"><span class="half upper ${up?'lit':''}"></span><span class="half lower ${down?'lit':''}"></span><span class="grade-glyph">${name}</span></span><span class="grade-name">${name}年级</span><span class="card-count">${done} / ${levels.length}</span></button>`;
   }).join('')}</div>${progress.lastLevel && findLevel(progress.lastLevel) ? `<button class="resume-button" data-action="resume">继续上次的练习 <span>→</span></button>`:''}<div class="home-foot">${progress.days.includes(localDate())?`${icon('check')} 今天来过啦`:'每天一点，慢慢点亮'}</div></main>`;
+  const supplement=curriculum.books.find(b=>b.id==='supplement');
+  if(supplement)app.querySelector('.grade-grid')?.insertAdjacentHTML('afterend',`<button class="supplement-entry" data-go="#/book/${supplement.id}"><span>补充字</span><span>${supplement.characters.length} 字</span>${tally(supplement)}</button>`);
 }
 function yearPage(grade: number): void {
   const books = curriculum.books.filter(b=>b.grade===grade);
@@ -97,7 +100,7 @@ function yearPage(grade: number): void {
 }
 function mapPage(book: Book): void {
   const levels=levelsFor(book);
-  app.innerHTML = `${chrome(`${gradeNames[book.grade-1]}年级 · ${book.term===1?'上':'下'}学期`,`#/grade/${book.grade}`,tally(book))}<main class="page constellation"><div class="star-grid">${levels.map(level=>{
+  app.innerHTML = `${chrome(book.grade===0?book.title:`${gradeNames[book.grade-1]}年级 · ${book.term===1?'上':'下'}学期`,book.grade===0?'#/':`#/grade/${book.grade}`,tally(book))}<main class="page constellation"><div class="star-grid">${levels.map(level=>{
     const done=isComplete(progress,level), unlocked=isUnlocked(progress,level,book), active=!done&&unlocked;
     return `<button class="star-button ${done?'done':active?'next':'locked'}" data-go="#/level/${book.id}/${level.index}" ${unlocked?'':'disabled'} aria-label="第 ${level.index+1} 关，${escape(level.characters[0].hanzi)}，${level.characters.length} 个字，${done?'已点亮，可复习':active?'可以开始':'尚未解锁'}">${star(level.characters[0].hanzi)}${active?'<span class="active-dot" aria-hidden="true"></span>':''}${!unlocked?`<span class="lock-mark">${icon('lock')}</span>`:''}</button>`;
   }).join('')}</div></main>`;
@@ -167,6 +170,13 @@ async function setupWriter(c:Character,recall:boolean,token:number):Promise<void
     const data=await getStroke(c);if(token!==generation)return;
     const target=document.querySelector<HTMLElement>('#writer')!,size=target.getBoundingClientRect().width;
     writer=HanziWriter.create(target,c.hanzi,{width:size,height:size,padding:20,showCharacter:false,showOutline:!recall,strokeColor:'#294d39',outlineColor:'#e0e8d9',drawingColor:'#294d39',highlightColor:'#c2852d',drawingWidth:9,strokeAnimationSpeed:1.2,delayBetweenStrokes:220,showHintAfterMisses:false,highlightOnComplete:false,acceptBackwardsStrokes:false,markStrokeCorrectAfterMisses:false,leniency:1,charDataLoader:()=>data});
+    let currentSize=size;
+    writerResize=new ResizeObserver(()=>{
+      if(token!==generation||!writer)return;
+      const nextSize=target.getBoundingClientRect().width;
+      if(nextSize>0&&Math.abs(nextSize-currentSize)>0.5){currentSize=nextSize;writer.updateDimensions({width:nextSize,height:nextSize});}
+    });
+    writerResize.observe(target);
     document.querySelector('#writer-loading')?.remove();
     if(!recall){await writer.animateCharacter();if(token!==generation)return;await writer.hideCharacter();}
     if(token!==generation)return;
@@ -209,7 +219,7 @@ function recordsPage():void{
   app.innerHTML=`${chrome('学习记录','#/')}<main class="page records-page"><div class="record-summary"><div><strong>${done} <small>/ ${total}</small></strong><span>已点亮星星</span></div><div><strong>${progress.days.length}</strong><span>练习天数</span></div></div><div class="backup-actions"><button class="secondary" data-action="export">${icon('download')} 导出备份</button><button class="secondary" data-action="import">${icon('upload')} 导入备份</button><input type="file" id="backup-file" accept="application/json,.json" hidden /></div><p class="record-note">进度保存在这台设备的当前浏览器中。清理浏览器数据前，请先导出备份。</p>${store.error?'<button class="text-button" data-action="export-original">导出原始记录</button>':''}<details class="record-details"><summary>教材版本与字库</summary><p>每册合并识字表和写字表，按来源顺序在册内去重。星星表示已完成本关的屏幕练习，纸笔书写还需要在作业中运用。</p>${curriculum.books.map(b=>`<section><h3>${escape(b.title)}</h3><p>${escape(b.edition)} · ${b.characters.length} 字 · ${levelsFor(b).length} 颗星</p>${b.notes.map(n=>`<p>${escape(n)}</p>`).join('')}${b.sources.map(s=>`<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title||'字表来源')}</a>`).join(' · ')}</section>`).join('')}</details><details class="record-details"><summary>关于汉字星星</summary><p>认读答错的字会单独复习；全部认会，并在跟写后无提示独立写对，本关才会点亮。学过的星星可以重复复习，不会重复计数。</p><p>字形与笔顺使用 Hanzi Writer / Make Me a Hanzi 数据。<a href="${base}licenses/ARPHICPL.txt" target="_blank" rel="noopener">数据许可</a> · <a href="${base}licenses/THIRD-PARTY.txt" target="_blank" rel="noopener">开源说明</a></p><p>字库版本：${escape(curriculum.version)}</p></details></main>`;
 }
 function render():void{
-  generation++;followSequence++;voice.stop();writer?.cancelQuiz();writer=null;current=null;
+  generation++;followSequence++;voice.stop();writerResize?.disconnect();writerResize=null;writer?.cancelQuiz();writer=null;current=null;
   const parts=(location.hash||'#/').slice(1).split('/').filter(Boolean);
   if(parts[0]==='grade'&&/^[1-6]$/.test(parts[1]||''))yearPage(Number(parts[1]));
   else if(parts[0]==='book'){
@@ -229,8 +239,17 @@ function render():void{
     recordsPage();
     app.querySelector('.record-summary')?.insertAdjacentHTML('afterend',`<button class="sync-entry" data-go="#/sync"><span><strong>跨设备同步</strong><small data-sync-message></small></span><span aria-hidden="true">→</span></button>`);
     const note=app.querySelector('.record-note');if(note)note.textContent='进度自动保存在本机。连接 GitHub 私有仓库后，可在 iPad 和其他设备之间同步。';
+    app.querySelector('.record-details')?.insertAdjacentHTML('beforebegin',coverageDetails());
   }else if(parts[0]==='sync')syncPage();else home();
   updateSaveNotice();updateSyncStatus();window.scrollTo({top:0,behavior:'instant'});
+}
+
+function coverageDetails():string{
+  const rows=curriculum.books.map(book=>{
+    const c=book.coverage;
+    return `<tr><th scope="row">${escape(book.title)}</th><td>${c?c.recognition:'—'}</td><td>${c?c.writing:'—'}</td><td>${c?c.overlap:'—'}</td><td>${book.characters.length}</td><td>${levelsFor(book).length}</td></tr>`;
+  }).join('');
+  return `<details class="record-details"><summary>为什么各年级的字数不同？</summary><p>这里统计每册识字表与写字表合并后的练习字数，不是该年级累计应掌握的汉字总量。同一汉字在同册只算一次，跨册保留复习。</p><div class="coverage-scroll"><table class="coverage-table"><thead><tr><th>册别</th><th>识字表</th><th>写字表</th><th>重合</th><th>合并</th><th>星星</th></tr></thead><tbody>${rows}</tbody></table></div><p>识字表列数已含蓝色复习字，并按汉字去重，因此可能大于书末标注的“新字”数量。合并数＝识字表＋写字表－两表重合。</p><p>现有六年级两册没有识字表，写字表分别为180字、120字。它们没有重复列出低年级已经学过的全部汉字。</p><p>另设「补充字」58字、6颗星，补齐新旧版混用后缺少的已核验旧版字。现在共覆盖3,031个不同汉字、472颗星；原关卡与学习进度保留。</p><p><strong>核验范围：</strong>已逐字核对当前十二份教材及旧版一至三年级字表，覆盖这些来源的全部汉字。四至六年级仍使用旧版，尚未完成2026修订版全套核验。</p><a href="https://github.com/jnwang/hanzi-stars/blob/main/data/CURRICULUM-AUDIT.md" target="_blank" rel="noopener noreferrer">查看核验报告与来源</a></details>`;
 }
 
 function syncPage():void{
@@ -335,7 +354,7 @@ setInterval(syncIfVisible,60_000);
 async function start():Promise<void>{
   try{
     const response=await fetch(new URL('data/curriculum.json',base));if(!response.ok)throw new Error('字库暂时没有打开');
-    curriculum=await response.json();if(curriculum.books.length!==12)throw new Error('字库不完整');
+    curriculum=await response.json();if(curriculum.books.filter(b=>b.grade>=1&&b.grade<=6).length!==12)throw new Error('字库不完整');
     store=new ProgressStore(curriculum);progress=store.load();
     sync=new GitHubSync({curriculum,storage:localStorage,getProgress:()=>{if(store.error)throw new Error('请先处理本机保存提示，再进行云同步。');return progress;},receive:receiveCloud,changed:updateSyncStatus});
     if(sync.connected&&!store.error){

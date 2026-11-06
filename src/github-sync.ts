@@ -145,32 +145,43 @@ export class GitHubSync {
     if (!repo.default_branch || typeof repo.default_branch !== 'string') throw new Error('请先在私有仓库中创建 README 文件。');
     return repo.default_branch;
   }
+  private async readProgress(config: SyncConfig, branch: string, version: string): Promise<{progress:Progress;sha:string}|null> {
+    const suffix=`/contents/progress/${encodeURIComponent(version)}.json?ref=${encodeURIComponent(branch)}`;
+    try {
+      const file=await (await this.request(config,suffix)).json();
+      if(file.type!=='file'||typeof file.sha!=='string'||file.size>4_000_000)throw new Error('云端记录格式或大小不正确，未覆盖任何记录。');
+      const text=file.encoding==='base64'?decodeContent(file.content)
+        :await (await this.request(config,suffix,{headers:{Accept:'application/vnd.github.raw+json'}})).text();
+      if(text.length>4_000_000)throw new Error('云端记录过大，未覆盖任何记录。');
+      try { return {progress:validateProgress(JSON.parse(text),this.options.curriculum),sha:file.sha}; }
+      catch { throw new Error('云端记录无法校验，未覆盖任何记录，请先检查云端备份。'); }
+    }catch(error){
+      if(error instanceof RequestError&&error.status===404)return null;
+      throw error;
+    }
+  }
   private async exchange(config: SyncConfig, epoch: number): Promise<void> {
     const curriculum = this.options.curriculum;
     // Check visibility on every exchange, including after settings change remotely.
     const branch = await this.checkRepository(config);
     if (epoch !== this.epoch) return;
     for (let attempt = 0; attempt < 3; attempt++) {
-      let remote: Progress | null = null, sha: string | undefined;
-      const suffix = `/contents/${this.path}?ref=${encodeURIComponent(branch)}`;
-      try {
-        const file = await (await this.request(config, suffix)).json();
-        if (file.type !== 'file' || typeof file.sha !== 'string' || file.size > 4_000_000) throw new Error('云端记录格式或大小不正确，未覆盖任何记录。');
-        sha = file.sha;
-        const text = file.encoding === 'base64' ? decodeContent(file.content)
-          : await (await this.request(config, suffix, { headers: { Accept: 'application/vnd.github.raw+json' } })).text();
-        if (text.length > 4_000_000) throw new Error('云端记录过大，未覆盖任何记录。');
-        try { remote = validateProgress(JSON.parse(text), curriculum); }
-        catch { throw new Error('云端记录无法校验，未覆盖任何记录，请先检查云端备份。'); }
-      } catch (error) {
-        if (!(error instanceof RequestError && error.status === 404)) throw error;
+      const file=await this.readProgress(config,branch,curriculum.version);
+      let remote=file?.progress||null;
+      const sha=file?.sha;
+      let migrated=false;
+      if(!file){
+        for(const version of curriculum.legacyVersions||[]){
+          const legacy=await this.readProgress(config,branch,version);
+          if(legacy){remote=remote?mergeProgress(remote,legacy.progress,curriculum):legacy.progress;migrated=true;}
+        }
       }
       if (epoch !== this.epoch) return;
       const local = validateProgress(this.options.getProgress(), curriculum);
       const merged = remote ? mergeProgress(local, remote, curriculum) : local;
       // Capture local changes made while a request is in flight in the next exchange.
       const snapshot = progressFingerprint(local);
-      if (!remote || progressFingerprint(merged) !== progressFingerprint(remote)) {
+      if (migrated || !remote || progressFingerprint(merged) !== progressFingerprint(remote)) {
         const text = JSON.stringify(merged);
         if (new TextEncoder().encode(text).length > 4_000_000) throw new Error('学习记录过大，请先导出备份。');
         try {

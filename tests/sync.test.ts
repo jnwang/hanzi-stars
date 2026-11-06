@@ -139,3 +139,41 @@ test('连接检查期间断开，不会在请求返回后重新保存密钥',asy
   a.sync.disconnect();release();await connecting;
   assert.equal(a.sync.connected,false);assert.equal(a.sync.status.state,'off');assert.equal(a.storage.getItem(SYNC_KEY),null);assert.equal(remote.state.puts,0);
 });
+
+function extended(old:Curriculum):Curriculum{
+  return {...structuredClone(old),version:`${old.version}-extra`,legacyVersions:[old.version],books:[...structuredClone(old.books),{...structuredClone(old.books[0]),id:'supplement',grade:0,term:0,title:'补充字',characters:old.books[0].characters.slice(0,5)}]};
+}
+test('增加独立补充字关卡后，本机旧进度自动迁移并保留原备份',()=>{
+  const old=curriculum(),next=extended(old),storage=memory(),before=new ProgressStore(old,storage as unknown as Storage),p=before.load();complete(p,old);before.save(p);const raw=before.raw();
+  const after=new ProgressStore(next,storage as unknown as Storage),restored=after.load();
+  assert.equal(restored.curriculumVersion,next.version);assert.deepEqual(restored.completed,p.completed);assert.deepEqual(restored.sessions,p.sessions);assert.equal(restored.completed.supplement,undefined);assert.equal(storage.getItem(before.key),raw);assert.ok(storage.getItem(after.key));
+});
+test('旧导出文件可升级，未知字库仍然拒绝',()=>{
+  const old=curriculum(),next=extended(old),p=emptyProgress(old);complete(p,old);
+  assert.equal(validateProgress(p,next).curriculumVersion,next.version);assert.equal(p.curriculumVersion,old.version);
+  assert.throws(()=>validateProgress({...p,curriculumVersion:'unrelated-version'},next));
+});
+test('本机迁移保存失败仍展示原有进度，原版本记录不删除',()=>{
+  const old=curriculum(),next=extended(old),p=emptyProgress(old);complete(p,old);const raw=JSON.stringify(p);
+  const memory={getItem:(key:string)=>key===`hanzi-stars:v1:${old.version}`?raw:null,setItem:()=>{throw new Error('quota');}} as unknown as Storage;
+  const store=new ProgressStore(next,memory),restored=store.load();assert.deepEqual(restored.completed,p.completed);assert.match(store.error,/新记录未保存/);assert.equal(memory.getItem(`hanzi-stars:v1:${old.version}`),raw);
+});
+test('云端旧版本首次迁移到新文件，不覆盖旧文件或丢失星星',async()=>{
+  const old=curriculum(),next=extended(old),saved=emptyProgress(old);complete(saved,old);
+  const files=new Map<string,string>([[old.version,JSON.stringify(saved)]]);const requests:string[]=[];
+  const json=(v:unknown,status=200)=>new Response(JSON.stringify(v),{status});
+  const fetcher:typeof fetch=async(url,init)=>{
+    const path=new URL(String(url)).pathname;
+    if(!path.includes('/contents/'))return json({private:true,default_branch:'main'});
+    const version=decodeURIComponent(path.split('/').at(-1)!.replace(/\.json$/,''));requests.push(version);
+    if(init?.method==='PUT'){
+      const body=JSON.parse(String(init.body));assert.equal(version,next.version);assert.equal(body.sha,undefined);
+      files.set(version,decodeContent(body.content));return json({},201);
+    }
+    const text=files.get(version);return text?json({type:'file',sha:'saved-sha',size:text.length,encoding:'base64',content:encodeContent(text)}):json({},404);
+  };
+  const a=device(next,fetcher);await a.sync.connect(repository,token);
+  assert.equal(a.sync.status.state,'synced');assert.deepEqual(a.p.completed,saved.completed);assert.equal(a.p.curriculumVersion,next.version);
+  assert.equal(files.get(old.version),JSON.stringify(saved));assert.equal(JSON.parse(files.get(next.version)!).curriculumVersion,next.version);
+  requests.length=0;await a.sync.syncNow();assert.ok(!requests.includes(old.version));
+});
